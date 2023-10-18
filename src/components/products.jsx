@@ -1,6 +1,6 @@
 import React ,{ useContext } from "react";
 import { Link } from "react-router-dom";
-import { PRODUCTS } from "../products";
+import { PRODUCTS } from "../products"
 import { CartContext } from '../cartContext';
 const Products = () => {
 
@@ -27,7 +27,7 @@ const Products = () => {
                       <div className="product__items--thumbnail">
                         <Link
                           className="product__items--link"
-                          to="productdetails"
+                          to={`/productdetails/${product.id}`}
                         >
                           <img
                             className="product__items--img product__primary--img"

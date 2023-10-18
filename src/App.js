@@ -21,6 +21,7 @@ import ProductDetails from "./pages/productDetails";
 import Checkout from "./pages/checkout";
 
 import { CartProvider } from "../src/cartContext";
+import CheckoutWithId from "./pages/checkoutWithId";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Header />}>
             <Route index element={<Home />}></Route>
+            <Route path="productdetails/:id" element={<ProductDetails />}></Route>
             <Route path="shop" element={<Shop />}></Route>
             <Route path="about" element={<About />}></Route>
 
@@ -36,13 +38,13 @@ function App() {
            
             <Route path="cart" element={<Cart />}></Route>
 
-            <Route path="productdetails" element={<ProductDetails />}></Route>
+          
             <Route path="login" element={<Login />}></Route>
 
             <Route path="*" element={<NotFound />}></Route>
           </Route>
-
-         
+          <Route path="/checkout/:id" element={<CheckoutWithId />}></Route>
+          <Route path="checkout" element={<Checkout />}></Route>
         </Routes>
       </CartProvider>
     </>

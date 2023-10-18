@@ -2,9 +2,21 @@ import React from "react";
 import logo from "../assets/img/logo/nav-logo.png";
 import img from "../assets/img/product/small-product7.png";
 import img1 from "../assets/img/icon/credit-card.svg";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { PRODUCTS } from "../products";
+const CheckoutWithId = (props) => {
+  const { id } = useParams();
+  console.log("id:", id);
+  const queryParams = new URLSearchParams(window.location.search);
+  const quantity = queryParams.get("quantity");
 
-const Checkout = (props) => {
+  const selectedProduct = PRODUCTS.find(
+    (product) => product.id === parseInt(id)
+  );
+  console.log("selectedProduct:", selectedProduct);
+
+  const totalPrice = selectedProduct.current_price * quantity;
+
   return (
     <>
       {/*     
@@ -24,7 +36,6 @@ const Checkout = (props) => {
                     />
                   </Link>
                 </h1>
-
                 <nav>
                   <ol className="breadcrumb checkout__breadcrumb d-flex">
                     <li className="breadcrumb__item breadcrumb__item--completed d-flex align-items-center">
@@ -288,7 +299,6 @@ const Checkout = (props) => {
                       </div>
                     </div>
                   </div>
-
                   <div className="checkout__content--step section__shipping--address pt-10">
                     <div className="section__header mb-25">
                       <h3 className="section__header--title">
@@ -445,6 +455,7 @@ const Checkout = (props) => {
                   </div>
                 </form>
               </main>
+
               <footer className="main__footer checkout__footer">
                 <p className="copyright__content">
                   Copyright © 2022{" "}
@@ -469,25 +480,27 @@ const Checkout = (props) => {
                             <a href="product-details.html">
                               <img
                                 className="border-radius-5"
-                                src={img}
+                                src={selectedProduct.img}
                                 alt="cart-product"
                               />
                             </a>
                             <span className="product__thumbnail--quantity">
-                              1
+                              {quantity}
                             </span>
                           </div>
                           <div className="product__description">
                             <h3 className="product__description--name h4">
                               <a href="product-details.html">
-                                overdode f,gnl;gh
+                                {selectedProduct.product_title}
                               </a>
                             </h3>
                           </div>
                         </div>
                       </td>
                       <td className="cart__table--body__list">
-                        <span className="cart__price">$567</span>
+                        <span className="cart__price">
+                          ${totalPrice.toFixed(2)}
+                        </span>
                       </td>
                     </tr>
                   </tbody>
@@ -536,7 +549,7 @@ const Checkout = (props) => {
                         Total{" "}
                       </td>
                       <td className="checkout__total--footer__amount checkout__total--footer__list text-right">
-                        $678
+                        ${totalPrice.toFixed(2)}
                       </td>
                     </tr>
                   </tfoot>
@@ -551,4 +564,4 @@ const Checkout = (props) => {
   );
 };
 
-export default Checkout;
+export default CheckoutWithId;

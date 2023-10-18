@@ -4,9 +4,15 @@ const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  
 
   const addToCart = (product) => {
-    setCartItems([...cartItems, product]);
+    // Check if the product is already in the cart
+    const isProductInCart = cartItems.some(item => item.id === product.id);
+
+    if (!isProductInCart) {
+      setCartItems([...cartItems, product]);
+    }
   };
   const removeFromCart = (productId) => {
     const updatedCart = cartItems.filter(item => item.id !== productId);
