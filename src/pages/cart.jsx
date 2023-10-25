@@ -13,7 +13,7 @@ import brand5 from "../assets/img/logo/brand-logo5.png";
 
 import { CartContext } from "../cartContext";
 
-import { Link, Outlet } from "react-router-dom";
+import { Link  } from "react-router-dom";
 import { PRODUCTS } from "../products";
 const Cart = () => {
   const { cartItems, removeFromCart } = useContext(CartContext);

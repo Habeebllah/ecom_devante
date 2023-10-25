@@ -1,17 +1,17 @@
 import React from "react";
-import img1 from "../assets/img/icon/bus.png";
+// import img1 from "../assets/img/icon/bus.png";
 
-import img2 from "../assets/img/icon/email.png";
-import img3 from "../assets/img/icon/language-icon.png";
-import img4 from "../assets/img/icon/usd-icon.png";
-import img5 from "../assets/img/icon/lamp.png";
-import logo from "../assets/img/logo/nav-log.png";
-import product1 from "../assets/img/product/product1.png";
-import product2 from "../assets/img/product/product2.png";
-import img16 from "../assets/img/other/shipping1.png";
-import img17 from "../assets/img/other/shipping2.png";
-import img18 from "../assets/img/other/shipping3.png";
-import img19 from "../assets/img/other/shipping4.png";
+// import img2 from "../assets/img/icon/email.png";
+// import img3 from "../assets/img/icon/language-icon.png";
+// import img4 from "../assets/img/icon/usd-icon.png";
+// import img5 from "../assets/img/icon/lamp.png";
+// import logo from "../assets/img/logo/nav-log.png";
+// import product1 from "../assets/img/product/product1.png";
+// import product2 from "../assets/img/product/product2.png";
+// import img16 from "../assets/img/other/shipping1.png";
+// import img17 from "../assets/img/other/shipping2.png";
+// import img18 from "../assets/img/other/shipping3.png";
+// import img19 from "../assets/img/other/shipping4.png";
 
 import brand1 from "../assets/img/logo/brand-logo1.png";
 import brand2 from "../assets/img/logo/brand-logo2.png";
@@ -236,6 +236,7 @@ const Contact = () => {
                       <a
                         className="contact__info--social__icon"
                         target="_blank"
+                        rel="noreferrer"
                         href="https://www.facebook.com"
                       >
                         <svg
@@ -258,6 +259,7 @@ const Contact = () => {
                       <a
                         className="contact__info--social__icon"
                         target="_blank"
+                        rel="noreferrer"
                         href="https://twitter.com"
                       >
                         <svg
@@ -280,6 +282,7 @@ const Contact = () => {
                       <a
                         className="contact__info--social__icon"
                         target="_blank"
+                        rel="noreferrer"
                         href="https://www.instagram.com"
                       >
                         <svg
@@ -302,6 +305,7 @@ const Contact = () => {
                       <a
                         className="contact__info--social__icon"
                         target="_blank"
+                        rel="noreferrer"
                         href="https://www.youtube.com"
                       >
                         <svg
@@ -334,6 +338,7 @@ const Contact = () => {
             class="contact__map--iframe"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7887.465355142307!2d-0.13384360843222626!3d51.4876034467734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760532743b90e1%3A0x790260718555a20c!2sU.S.%20Embassy%2C%20London!5e0!3m2!1sen!2sbd!4v1632035375945!5m2!1sen!2sbd"
             style={{ border: "0" }}
+            title="Google map"
             allowfullscreen=""
             loading="lazy"
           ></iframe>

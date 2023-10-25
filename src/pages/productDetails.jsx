@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 import img7 from "../assets/img/other/comment-thumb1.png";
 import product1 from "../assets/img/product/small-product7.png";
-import product2 from "../assets/img/product/product4.png";
+
 import { CartContext } from "../cartContext"; // Import the CartContext
 import { PRODUCTS } from "../products";
 import { Link, useParams } from "react-router-dom";
@@ -473,6 +473,7 @@ const ProductDetails = () => {
                           <a
                             className="quickview__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.facebook.com"
                           >
                             <svg
@@ -495,6 +496,7 @@ const ProductDetails = () => {
                           <a
                             className="quickview__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://twitter.com"
                           >
                             <svg
@@ -517,6 +519,7 @@ const ProductDetails = () => {
                           <a
                             className="quickview__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.instagram.com"
                           >
                             <svg
@@ -539,6 +542,7 @@ const ProductDetails = () => {
                           <a
                             className="quickview__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.youtube.com"
                           >
                             <svg

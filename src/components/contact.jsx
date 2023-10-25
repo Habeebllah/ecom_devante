@@ -103,6 +103,7 @@ const Contact = () => {
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9938.68117036573!2d-0.132237!3d51.482566!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x790260718555a20c!2sU.S.%20Embassy%2C%20London!5e0!3m2!1sen!2sbd!4v1640062764401!5m2!1sen!2sbd"
                     width="600"
                     height="380"
+                    title="Google Maps"
                     style={{ border: "0" }}
                     allowfullscreen=""
                     loading="lazy"

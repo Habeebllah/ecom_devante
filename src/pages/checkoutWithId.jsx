@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/img/logo/nav-logo.png";
-import img from "../assets/img/product/small-product7.png";
+// import img from "../assets/img/product/small-product7.png";
 import img1 from "../assets/img/icon/credit-card.svg";
 import { Link, useParams } from "react-router-dom";
 import { PRODUCTS } from "../products";

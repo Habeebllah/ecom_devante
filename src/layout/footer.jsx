@@ -6,6 +6,7 @@ import img4 from "..//assets/img/other/instagram4.webp";
 import img5 from "..//assets/img/other/instagram5.webp";
 import img6 from "..//assets/img/other/instagram6.webp";
 import img7 from "..//assets/img/other/payment-visa-card.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -51,6 +52,7 @@ const Footer = () => {
                       <a
                         className="social__shear--list__icon"
                         target="_blank"
+                        rel="noreferrer"
                         href="https://www.facebook.com"
                       >
                         <svg
@@ -73,6 +75,7 @@ const Footer = () => {
                       <a
                         className="social__shear--list__icon"
                         target="_blank"
+                        rel="noreferrer"
                         href="https://twitter.com"
                       >
                         <svg
@@ -95,6 +98,7 @@ const Footer = () => {
                       <a
                         className="social__shear--list__icon"
                         target="_blank"
+                        rel="noreferrer"
                         href="https://www.instagram.com"
                       >
                         <svg
@@ -117,6 +121,7 @@ const Footer = () => {
                       <a
                         className="social__shear--list__icon"
                         target="_blank"
+                        rel="noreferrer"
                         href="https://www.youtube.com"
                       >
                         <svg
@@ -164,44 +169,37 @@ const Footer = () => {
                 </h2>
                 <ul className="footer__widget--menu footer__widget--inner">
                   <li className="footer__widget--menu__list">
-                    <a
+                    <Link
                       className="footer__widget--menu__text"
-                      href="my-account.html"
+                      to="my-account"
                     >
                       My Account
-                    </a>
+                    </Link>
                   </li>
                   <li className="footer__widget--menu__list">
-                    <a className="footer__widget--menu__text" href="cart.html">
+                    <Link className="footer__widget--menu__text" to="/cart">
                       Shopping Cart
-                    </a>
+                    </Link>
                   </li>
                   <li className="footer__widget--menu__list">
-                    <a className="footer__widget--menu__text" href="login.html">
+                    <Link className="footer__widget--menu__text" to="login">
                       Login
-                    </a>
+                    </Link>
                   </li>
                   <li className="footer__widget--menu__list">
-                    <a className="footer__widget--menu__text" href="login.html">
+                    <Link className="footer__widget--menu__text" to="login">
                       Register
-                    </a>
+                    </Link>
                   </li>
                   <li className="footer__widget--menu__list">
-                    <a
+                    <Link
                       className="footer__widget--menu__text"
-                      href="checkout.html"
+                      to="checkout"
                     >
                       Checkout
-                    </a>
+                    </Link>
                   </li>
-                  <li className="footer__widget--menu__list">
-                    <a
-                      className="footer__widget--menu__text"
-                      href="wishlist.html"
-                    >
-                      Wishlist
-                    </a>
-                  </li>
+                 
                 </ul>
               </div>
               <div className="footer__widget">
@@ -228,26 +226,19 @@ const Footer = () => {
                 </h2>
                 <ul className="footer__widget--menu footer__widget--inner">
                   <li className="footer__widget--menu__list">
-                    <a className="footer__widget--menu__text" href="about.html">
+                    <Link className="footer__widget--menu__text" to="about">
                       About Us
-                    </a>
+                    </Link>
                   </li>
                   <li className="footer__widget--menu__list">
-                    <a
+                    <Link
                       className="footer__widget--menu__text"
-                      href="contact.html"
+                      to="contact"
                     >
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
-                  <li className="footer__widget--menu__list">
-                    <a
-                      className="footer__widget--menu__text"
-                      href="portfolio.html"
-                    >
-                      Portfolio
-                    </a>
-                  </li>
+                 
                   <li className="footer__widget--menu__list">
                     <a
                       className="footer__widget--menu__text"
@@ -300,6 +291,7 @@ const Footer = () => {
                     <a
                       className="instagram__thumbnail--img"
                       target="_blank"
+                      rel="noreferrer"
                       href="https://www.instagram.com/p/CZkF3TLBTT7"
                     >
                       <img src={img1} alt="instagram" />
@@ -309,6 +301,7 @@ const Footer = () => {
                     <a
                       className="instagram__thumbnail--img"
                       target="_blank"
+                      rel="noreferrer"
                       href="https://www.instagram.com/p/CZkF60sBxhN"
                     >
                       <img src={img2} alt="instagram" />
@@ -318,6 +311,7 @@ const Footer = () => {
                     <a
                       className="instagram__thumbnail--img"
                       target="_blank"
+                      rel="noreferrer"
                       href="https://www.instagram.com/p/CZkF90ZB6HG"
                     >
                       <img src={img3} alt="instagram" />
@@ -329,6 +323,7 @@ const Footer = () => {
                     <a
                       className="instagram__thumbnail--img"
                       target="_blank"
+                      rel="noreferrer"
                       href="https://www.instagram.com/p/CZkGAe6BQeu"
                     >
                       <img src={img4} alt="instagram" />
@@ -338,6 +333,7 @@ const Footer = () => {
                     <a
                       className="instagram__thumbnail--img"
                       target="_blank"
+                      rel="noreferrer"
                       href="https://www.instagram.com/p/CZkGCWcBbv9"
                     >
                       <img src={img5} alt="instagram" />
@@ -347,6 +343,7 @@ const Footer = () => {
                     <a
                       className="instagram__thumbnail--img"
                       target="_blank"
+                      rel="noreferrer"
                       href="https://www.instagram.com/p/CZkGFDMhoid"
                     >
                       <img src={img6} alt="instagram" />

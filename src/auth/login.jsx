@@ -1,8 +1,5 @@
 import React from "react";
-import img16 from "../assets/img/other/shipping1.png";
-import img17 from "../assets/img/other/shipping2.png";
-import img18 from "../assets/img/other/shipping3.png";
-import img19 from "../assets/img/other/shipping4.png";
+
 const Login = () => {
   return (
     <>
@@ -13,13 +10,7 @@ const Login = () => {
           <div className="container">
             <div className="row row-cols-1">
               <div className="col">
-                {/* <div className="breadcrumb__content text-center">
-                            <h1 className="breadcrumb__content--title text-white mb-25">Account Page</h1>
-                            <ul className="breadcrumb__content--menu d-flex justify-content-center">
-                                <li className="breadcrumb__content--menu__items"><a className="text-white" href="index.html">Home</a></li>
-                                <li className="breadcrumb__content--menu__items"><span class="text-white">Account Page</span></li>
-                            </ul>
-                        </div> */}
+                
               </div>
             </div>
           </div>
@@ -89,21 +80,21 @@ const Login = () => {
                         <div className="account__social d-flex justify-content-center mb-15">
                           <a
                             className="account__social--link facebook"
-                            target="_blank"
+                       
                             href="https://www.facebook.com"
                           >
                             Facebook
                           </a>
                           <a
                             className="account__social--link google"
-                            target="_blank"
-                            href="https://www.google.com"
+                           href="#"
+                      
                           >
                             Google
                           </a>
                           <a
                             className="account__social--link twitter"
-                            target="_blank"
+                        
                             href="https://twitter.com"
                           >
                             Twitter

@@ -278,6 +278,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.facebook.com"
                           >
                             <svg
@@ -300,6 +301,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://twitter.com"
                           >
                             <svg
@@ -322,6 +324,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.instagram.com"
                           >
                             <svg
@@ -344,6 +347,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.youtube.com"
                           >
                             <svg
@@ -383,6 +387,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.facebook.com"
                           >
                             <svg
@@ -405,6 +410,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://twitter.com"
                           >
                             <svg
@@ -427,6 +433,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.instagram.com"
                           >
                             <svg
@@ -449,6 +456,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.youtube.com"
                           >
                             <svg
@@ -490,6 +498,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.facebook.com"
                           >
                             <svg
@@ -512,6 +521,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://twitter.com"
                           >
                             <svg
@@ -534,6 +544,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.instagram.com"
                           >
                             <svg
@@ -556,6 +567,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.youtube.com"
                           >
                             <svg
@@ -597,6 +609,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.facebook.com"
                           >
                             <svg
@@ -619,6 +632,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://twitter.com"
                           >
                             <svg
@@ -641,6 +655,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.instagram.com"
                           >
                             <svg
@@ -663,6 +678,7 @@ const About = () => {
                           <a
                             class="team__social--icon"
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.youtube.com"
                           >
                             <svg

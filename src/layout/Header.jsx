@@ -64,7 +64,7 @@ const Header = () => {
               <div className="offcanvas__header--menu__open ">
                 <a
                   className="offcanvas__header--menu__open--btn"
-                  href="javascript:void(0)"
+                  href="#"
                   data-offcanvas
                 >
                   <svg
