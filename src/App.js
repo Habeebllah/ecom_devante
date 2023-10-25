@@ -2,13 +2,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 
-
 import Header from "./layout/Header";
 import Home from "./pages/home";
 import Shop from "./pages/shop";
 import Contact from "./pages/contact";
-
-
 
 import { Route, Routes } from "react-router-dom";
 import About from "./pages/about";
@@ -22,6 +19,9 @@ import Checkout from "./pages/checkout";
 
 import { CartProvider } from "../src/cartContext";
 import CheckoutWithId from "./pages/checkoutWithId";
+import Account from "./pages/account";
+import Dashboard from "./pages/dashboard";
+import Address from "./pages/address";
 
 function App() {
   return (
@@ -30,16 +30,20 @@ function App() {
         <Routes>
           <Route path="/" element={<Header />}>
             <Route index element={<Home />}></Route>
-            <Route path="productdetails/:id" element={<ProductDetails />}></Route>
+            <Route
+              path="productdetails/:id"
+              element={<ProductDetails />}
+            ></Route>
             <Route path="shop" element={<Shop />}></Route>
             <Route path="about" element={<About />}></Route>
 
-            <Route path="contact" element={<Contact />}></Route> 
-           
+            <Route path="contact" element={<Contact />}></Route>
+
             <Route path="cart" element={<Cart />}></Route>
 
-          
             <Route path="login" element={<Login />}></Route>
+            <Route path="account" element={<Account />}></Route>
+            <Route path="dashboard" element={<Dashboard />}></Route>
 
             <Route path="*" element={<NotFound />}></Route>
           </Route>
@@ -52,5 +56,3 @@ function App() {
 }
 
 export default App;
-
-

@@ -1,9 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import product1 from "../assets/img/product/small-product1.png";
 
 import { Link } from "react-router-dom";
 import { PRODUCTS } from "../products";
+import { CartContext } from "../cartContext";
 const Shop = () => {
+  const { addToCart } = useContext(CartContext);
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    console.log("Product added to cart:", product);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -296,7 +303,7 @@ const Shop = () => {
                                 <div className="product__items--thumbnail">
                                   <Link
                                     className="product__items--link"
-                                    to="productDetails"
+                                    to={`/productdetails/${product.id}`}
                                   >
                                     <img
                                       className="product__items--img product__primary--img"
@@ -423,9 +430,9 @@ const Shop = () => {
                                   </ul>
                                   <ul className="product__items--action d-flex">
                                     <li className="product__items--action__list">
-                                      <a
+                                      <Link
                                         className="product__items--action__btn add__to--cart"
-                                        href="cart.html"
+                                        onClick={() => handleAddToCart(product)}
                                       >
                                         <svg
                                           className="product__items--action__btn--svg"
@@ -461,7 +468,7 @@ const Shop = () => {
                                           {" "}
                                           + Add to cart
                                         </span>
-                                      </a>
+                                      </Link>
                                     </li>
                                   </ul>
                                 </div>

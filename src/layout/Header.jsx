@@ -145,8 +145,8 @@ const Header = () => {
               </div>
               <div className="header__account header__sticky--none">
                 <ul className="d-flex">
-                  <li className="header__account--items">
-                    <a className="header__account--btn" href="my-account.html">
+                  <li className="header__account--items" >
+                    <Link className="header__account--btn" to="account">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="26.51"
@@ -172,7 +172,7 @@ const Header = () => {
                       <span className="header__account--btn__text">
                         My Account
                       </span>
-                    </a>
+                    </Link>
                   </li>
                  
                   <Link className="header__account--items" to="cart">
