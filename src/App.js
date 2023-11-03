@@ -48,7 +48,7 @@ function App() {
             <Route path="*" element={<NotFound />}></Route>
           </Route>
           <Route path="/checkout/:id" element={<CheckoutWithId />}></Route>
-          <Route path="checkout" element={<Checkout />}></Route>
+          <Route path="checkout" element={<Checkout  />}></Route>
         </Routes>
       </CartProvider>
     </>

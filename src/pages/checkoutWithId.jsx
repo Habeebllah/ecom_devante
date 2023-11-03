@@ -506,23 +506,7 @@ const CheckoutWithId = (props) => {
                   </tbody>
                 </table>
               </div>
-              <div className="checkout__discount--code">
-                <form className="d-flex" action="#">
-                  <label>
-                    <input
-                      className="checkout__discount--code__input--field border-radius-5"
-                      placeholder="Gift card or discount code"
-                      type="text"
-                    />
-                  </label>
-                  <button
-                    className="checkout__discount--code__btn primary__btn border-radius-5"
-                    type="submit"
-                  >
-                    Apply
-                  </button>
-                </form>
-              </div>
+             
               <div className="checkout__total">
                 <table className="checkout__total--table">
                   <tbody className="checkout__total--body">
@@ -531,7 +515,7 @@ const CheckoutWithId = (props) => {
                         Subtotal{" "}
                       </td>
                       <td className="checkout__total--amount text-right">
-                        $860.00
+                      ${totalPrice.toFixed(2)}
                       </td>
                     </tr>
                     <tr className="checkout__total--items">

@@ -6,9 +6,10 @@ import Feauture from "../components/feauture";
 
 
 import Testimonial from "../components/testimonial";
-import Contact from "../components/contact";
+
 
 import Products from "../components/products";
+import Shipping from "../components/shipping";
 
 
 const Home = () => {
@@ -22,7 +23,8 @@ const Home = () => {
       <Brand />
      
       <Testimonial />
-      <Contact />
+      <Shipping/>
+     
      
     
     </main>

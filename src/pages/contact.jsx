@@ -13,35 +13,10 @@ import React from "react";
 // import img18 from "../assets/img/other/shipping3.png";
 // import img19 from "../assets/img/other/shipping4.png";
 
-import brand1 from "../assets/img/logo/brand-logo1.png";
-import brand2 from "../assets/img/logo/brand-logo2.png";
-import brand3 from "../assets/img/logo/brand-logo3.png";
-import brand4 from "../assets/img/logo/brand-logo4.png";
-import brand5 from "../assets/img/logo/brand-logo5.png";
 const Contact = () => {
   return (
     <>
-     
-
       <main class="main__content_wrapper">
-        {/* <!-- Start breadcrumb section --> */}
-        <section className="breadcrumb__section breadcrumb__bg">
-          <div className="container">
-            <div className="row row-cols-1">
-              <div className="col">
-                {/* <div className="breadcrumb__content text-center">
-                            <h1 className="breadcrumb__content--title text-white mb-25">Contact Us</h1>
-                            <ul className="breadcrumb__content--menu d-flex justify-content-center">
-                                <li className="breadcrumb__content--menu__items"><a className="text-white" href="index.html">Home</a></li>
-                                <li className="breadcrumb__content--menu__items"><span class="text-white">Contact Us</span></li>
-                            </ul>
-                        </div> */}
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* <!-- End breadcrumb section --> */}
-
         {/* <!-- Start contact section --> */}
         <section className="contact__section section--padding">
           <div className="container">
@@ -159,9 +134,7 @@ const Contact = () => {
                     </div>
                     <div className="contact__info--content">
                       <p className="contact__info--content__desc text-white">
-                        Change the design through a range <br />{" "}
-                        <a href="tel:+01234-567890">+01234-567890</a>{" "}
-                        <a href="tel:++01234-5688765">+01234-5688765</a>{" "}
+                        <a href="tel:+01234-567890">07038151697</a>
                       </p>
                     </div>
                   </div>
@@ -189,11 +162,12 @@ const Contact = () => {
                     <div className="contact__info--content">
                       <p className="contact__info--content__desc text-white">
                         {" "}
-                        <a href="mailto:info@example.com">
-                          info@example.com
+                        <a href="mailto:godmother.aquila@gmail.com
+">
+                      godmother.aquila@gmail.com
+
                         </a>{" "}
-                        <br />{" "}
-                        <a href="mailto:info@example.com">info@example.com</a>
+                        
                       </p>
                     </div>
                   </div>
@@ -220,9 +194,8 @@ const Contact = () => {
                     </div>
                     <div className="contact__info--content">
                       <p className="contact__info--content__desc text-white">
-                        {" "}
-                        123 Stree New York City , United States Of America NY
-                        750065.
+                      Shop 38/34 Omida shopping complex Omida, Abeokuta, Ogun state.
+
                       </p>
                     </div>
                   </div>
@@ -237,7 +210,7 @@ const Contact = () => {
                         className="contact__info--social__icon"
                         target="_blank"
                         rel="noreferrer"
-                        href="https://www.facebook.com"
+                        href="https://www.facebook.com/profile.php?id=100054852456392&mibextid=LQQJ4d"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -283,7 +256,7 @@ const Contact = () => {
                         className="contact__info--social__icon"
                         target="_blank"
                         rel="noreferrer"
-                        href="https://www.instagram.com"
+                        href="https://instagram.com/devantijewellery?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -301,29 +274,7 @@ const Contact = () => {
                         <span className="visually-hidden">Instagram</span>
                       </a>
                     </li>
-                    <li className="contact__info--social__list">
-                      <a
-                        className="contact__info--social__icon"
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://www.youtube.com"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16.49"
-                          height="11.582"
-                          viewBox="0 0 16.49 11.582"
-                        >
-                          <path
-                            data-name="Path 321"
-                            d="M967.759,1365.592q0,1.377-.019,1.717-.076,1.114-.151,1.622a3.981,3.981,0,0,1-.245.925,1.847,1.847,0,0,1-.453.717,2.171,2.171,0,0,1-1.151.6q-3.585.265-7.641.189-2.377-.038-3.387-.085a11.337,11.337,0,0,1-1.5-.142,2.206,2.206,0,0,1-1.113-.585,2.562,2.562,0,0,1-.528-1.037,3.523,3.523,0,0,1-.141-.585c-.032-.2-.06-.5-.085-.906a38.894,38.894,0,0,1,0-4.867l.113-.925a4.382,4.382,0,0,1,.208-.906,2.069,2.069,0,0,1,.491-.755,2.409,2.409,0,0,1,1.113-.566,19.2,19.2,0,0,1,2.292-.151q1.82-.056,3.953-.056t3.952.066q1.821.067,2.311.142a2.3,2.3,0,0,1,.726.283,1.865,1.865,0,0,1,.557.49,3.425,3.425,0,0,1,.434,1.019,5.72,5.72,0,0,1,.189,1.075q0,.095.057,1C967.752,1364.1,967.759,1364.677,967.759,1365.592Zm-7.6.925q1.49-.754,2.113-1.094l-4.434-2.339v4.66Q958.609,1367.311,960.156,1366.517Z"
-                            transform="translate(-951.269 -1359.8)"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                        <span className="visually-hidden">Youtube</span>
-                      </a>
-                    </li>
+                   
                   </ul>
                 </div>
               </div>
@@ -345,55 +296,6 @@ const Contact = () => {
         </div>
         {/* <!-- End contact map area --> */}
 
-        {/* <!-- Start brand logo section --> */}
-        <div class="brand__logo--section bg__secondary section--padding">
-          <div class="container-fluid">
-            <div class="row row-cols-1">
-              <div class="col">
-                <div class="brand__logo--section__inner d-flex justify-content-center align-items-center">
-                  <div class="brand__logo--items">
-                    <img
-                      class="brand__logo--items__thumbnail--img display-block"
-                      src={brand1}
-                      alt="brand logo"
-                    />
-                  </div>
-                  <div class="brand__logo--items">
-                    <img
-                      class="brand__logo--items__thumbnail--img display-block"
-                      src={brand2}
-                      alt="brand logo"
-                    />
-                  </div>
-                  <div class="brand__logo--items">
-                    <img
-                      class="brand__logo--items__thumbnail--img display-block"
-                      src={brand3}
-                      alt="brand logo"
-                    />
-                  </div>
-                  <div class="brand__logo--items">
-                    <img
-                      class="brand__logo--items__thumbnail--img display-block"
-                      src={brand4}
-                      alt="brand logo"
-                    />
-                  </div>
-                  <div class="brand__logo--items">
-                    <img
-                      class="brand__logo--items__thumbnail--img display-block"
-                      src={brand5}
-                      alt="brand logo"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* <!-- End brand logo section --> */}
-
-   
       </main>
     </>
   );

@@ -12,63 +12,55 @@ import { Link } from "react-router-dom";
 const Feauture = () => {
   return (
     <>
-      <section className="product__section section--padding color-scheme-2 pt-0">
+      <section
+        className="product__section section--padding color-scheme-2" 
+        style={{ backgroundColor: "#000000" , padding:"50px 50px"}}
+      >
         <div className="container-fluid">
           <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb--n30">
-            <div className="col mb-30">
+           
+  
+          <div className="col mb-35">
               <div className="banner__items position__relative">
-                <Link
-                  className="banner__items--thumbnail width-100 "
-                  href="shop"
+                <div className="product__grid--heading">
+                  <h2 className="product__grid--heading__maintitle position__relative text-white">
+                    Newly Arrivals
+                  </h2>
+                </div>
+                <a
+                  className="banner__items--thumbnail md-width-100"
+                  href="shop.html"
                 >
                   <img
-                    className="banner__items--thumbnail__img width-100"
+                    className="banner__items--thumbnail__img md-width-100"
                     src={img1}
                     alt="banner-img"
                   />
-                  <div className="banner__items--content__style3">
-                    <span className="banner__items--content__style3--subtitle text-white">
-                      Wmen's Collection
-                    </span>
-                    <h2 className="banner__items--content__style3--title text-white h3">
-                      {" "}
-                      Min.40-70% Off
-                    </h2>
-                  </div>
-                </Link>
+                </a>
               </div>
             </div>
             <div className="col mb-30">
-              <div className="product__grid--wrapper">
-                <div className="product__grid--heading mb-30">
-                  <h2 className="product__grid--heading__maintitle position__relative">
-                    Featured
-                  </h2>
-                </div>
+              <div
+                className="product__grid--wrapper"
+                style={{ position: "relative", top: "40px" }}
+              >
                 <div className="product__grid--inner">
                   <div className="product__items product__items--grid d-flex align-items-center">
                     <div className="product__items--grid__thumbnail position__relative">
-                      <Link
+                      <a
                         className="product__items--link"
-                        to="productDetails"
+                        href="product-details.html"
                       >
-                     <img
-                          className="product__items--img product__primary--img"
-                          src={img2}
-                          alt="product-img"
-                        />
-                    
                         <img
-                          className="product__items--img product__secondary--img"
+                          className="product__items--img product__primary--img"
                           src={img3}
                           alt="product-img"
                         />
-
-                      </Link>
+                      </a>
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html">Women Fish Cut Cloth</a>
+                        <a href="product-details.html"> Durable Steel Knife</a>
                       </h3>
                       <div className="product__items--price">
                         <span className="current__price">$110</span>
@@ -177,21 +169,19 @@ const Feauture = () => {
                       >
                         <img
                           className="product__items--img product__primary--img"
-                          src={img4}
+                          src={img5}
                           alt="product-img"
                         />
                         <img
                           className="product__items--img product__secondary--img"
-                          src={img5}
+                          src={img4}
                           alt="product-img"
                         />
                       </a>
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html">
-                          Gorgeous Granite Clock
-                        </a>
+                        <a href="product-details.html"> Durable Steel Knife</a>
                       </h3>
                       <div className="product__items--price">
                         <span className="current__price">$140</span>
@@ -300,19 +290,19 @@ const Feauture = () => {
                       >
                         <img
                           className="product__items--img product__primary--img"
-                          src={img6}
+                          src={img7}
                           alt="product-img"
                         />
                         <img
                           className="product__items--img product__secondary--img"
-                          src={img7}
+                          src={img6}
                           alt="product-img"
                         />
                       </a>
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html">Durable Steel Knife</a>
+                        <a href="product-details.html"> Durable Steel Knife</a>
                       </h3>
                       <div className="product__items--price">
                         <span className="current__price">$160</span>
@@ -416,36 +406,31 @@ const Feauture = () => {
                 </div>
               </div>
             </div>
-            <div className="col mb-30">
+
+            <div className="col mb-35">
               <div className="banner__items position__relative">
+                <div className="product__grid--heading">
+                  <h2 className="product__grid--heading__maintitle position__relative text-white">
+                    Newly Arrivals
+                  </h2>
+                </div>
                 <a
                   className="banner__items--thumbnail md-width-100"
                   href="shop.html"
                 >
                   <img
                     className="banner__items--thumbnail__img md-width-100"
-                    src={img8}
+                    src={img1}
                     alt="banner-img"
                   />
-                  <div className="banner__items--content__style3">
-                    <span className="banner__items--content__style3--subtitle text-white">
-                      Wmen's Collection
-                    </span>
-                    <h2 className="banner__items--content__style3--title text-white h3">
-                      {" "}
-                      Min.40-70% Off
-                    </h2>
-                  </div>
                 </a>
               </div>
             </div>
             <div className="col mb-30">
-              <div className="product__grid--wrapper">
-                <div className="product__grid--heading mb-30">
-                  <h2 className="product__grid--heading__maintitle position__relative">
-                    Bestsellers
-                  </h2>
-                </div>
+              <div
+                className="product__grid--wrapper"
+                style={{ position: "relative", top: "40px" }}
+              >
                 <div className="product__grid--inner">
                   <div className="product__items product__items--grid d-flex align-items-center">
                     <div className="product__items--grid__thumbnail position__relative">
@@ -458,16 +443,11 @@ const Feauture = () => {
                           src={img3}
                           alt="product-img"
                         />
-                        <img
-                          className="product__items--img product__secondary--img"
-                          src={img2}
-                          alt="product-img"
-                        />
                       </a>
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html">Women White T-Shirt</a>
+                        <a href="product-details.html"> Durable Steel Knife</a>
                       </h3>
                       <div className="product__items--price">
                         <span className="current__price">$110</span>
@@ -588,7 +568,7 @@ const Feauture = () => {
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html">Women Modern Bags</a>
+                        <a href="product-details.html"> Durable Steel Knife</a>
                       </h3>
                       <div className="product__items--price">
                         <span className="current__price">$140</span>
@@ -709,7 +689,7 @@ const Feauture = () => {
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html">Smart Blazar for Men</a>
+                        <a href="product-details.html"> Durable Steel Knife</a>
                       </h3>
                       <div className="product__items--price">
                         <span className="current__price">$160</span>

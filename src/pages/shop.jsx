@@ -17,15 +17,7 @@ const Shop = () => {
   return (
     <>
       <main className="main__content_wrapper">
-        <section className="breadcrumb__section breadcrumb__bg">
-          <div className="container">
-            <div className="row row-cols-1">
-              <div className="col">
-                <div className="breadcrumb__content text-center"></div>
-              </div>
-            </div>
-          </div>
-        </section>
+   
 
         {/* <!-- Start shop section --> */}
         <section className="shop__section section--padding">

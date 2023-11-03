@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../assets/img/logo/nav-logo.png";
 import img from "../assets/img/product/small-product7.png";
 import img1 from "../assets/img/icon/credit-card.svg";
 import { Link } from "react-router-dom";
+import { CartContext } from "../cartContext";
 
 const Checkout = (props) => {
+  const { cartItems } = useContext(CartContext);
+  const [subtotal, setSubtotal] = useState(0);
+  useEffect(() => {
+    // Calculate subtotal
+    let total = 0;
+    cartItems.forEach((item) => {
+      total += item.quantity * item.current_price;
+    });
+    setSubtotal(total);
+  }, [cartItems]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {/*     
@@ -462,34 +477,36 @@ const Checkout = (props) => {
               <div className="cart__table checkout__product--table">
                 <table className="cart__table--inner">
                   <tbody className="cart__table--body">
-                    <tr className="cart__table--body__items">
-                      <td className="cart__table--body__list">
-                        <div className="product__image two  d-flex align-items-center">
-                          <div className="product__thumbnail border-radius-5">
-                            <a href="product-details.html">
-                              <img
-                                className="border-radius-5"
-                                src={img}
-                                alt="cart-product"
-                              />
-                            </a>
-                            <span className="product__thumbnail--quantity">
-                              1
-                            </span>
-                          </div>
-                          <div className="product__description">
-                            <h3 className="product__description--name h4">
+                    {cartItems.map((item) => (
+                      <tr key={item.id} className="cart__table--body__items">
+                        <td className="cart__table--body__list">
+                          <div className="product__image two  d-flex align-items-center">
+                            <div className="product__thumbnail border-radius-5">
                               <a href="product-details.html">
-                                overdode f,gnl;gh
+                                <img
+                                  className="border-radius-5"
+                                  src={item.img} // Assuming item.img is the URL of the product image
+                                  alt={item.product_title} // Assuming item.product_title is the product title
+                                />
                               </a>
-                            </h3>
+                              <span className="product__thumbnail--quantity">
+                                {item.quantity}
+                              </span>
+                            </div>
+                            <div className="product__description">
+                              <h3 className="product__description--name h4">
+                                <a href="product-details.html">
+                                  {item.product_title}
+                                </a>
+                              </h3>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                      <td className="cart__table--body__list">
-                        <span className="cart__price">$567</span>
-                      </td>
-                    </tr>
+                        </td>
+                        <td className="cart__table--body__list">
+                          <span className="cart__price">{`$${(item.current_price * item.quantity).toFixed(2)}`}</span>
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
@@ -518,7 +535,7 @@ const Checkout = (props) => {
                         Subtotal{" "}
                       </td>
                       <td className="checkout__total--amount text-right">
-                        $860.00
+                      ${subtotal.toFixed(2)}
                       </td>
                     </tr>
                     <tr className="checkout__total--items">
@@ -536,7 +553,7 @@ const Checkout = (props) => {
                         Total{" "}
                       </td>
                       <td className="checkout__total--footer__amount checkout__total--footer__list text-right">
-                        $678
+                      ${subtotal.toFixed(2)}
                       </td>
                     </tr>
                   </tfoot>

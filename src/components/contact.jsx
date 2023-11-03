@@ -29,13 +29,12 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div className="contact__info--content">
-                      <h3 className="contact__info--content__title mb-5">
+                      <h3 className="contact__info--content__title mb-1">
                         Address
                       </h3>
                       <p className="contact__info--content__desc">
-                        {" "}
-                        123 Stree New York City , United States Of America NY
-                        750065.
+                      Shop 38/34 Omida shopping complex Omida, Abeokuta, Ogun state.
+
                       </p>
                     </div>
                   </div>
@@ -56,12 +55,13 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div className="contact__info--content">
-                      <h3 className="contact__info--content__title mb-5">
+                      <h3 className="contact__info--content__title mb-1">
                         Phone
                       </h3>
                       <p className="contact__info--content__desc">
-                        <a href="tel:+01234-567890">+01234-567890</a> <br />{" "}
-                        <a href="tel:++01234-5688765">+01234-5688765</a>{" "}
+                        <a href="tel:+01234-567890">07038151697
+</a> 
+                      
                       </p>
                     </div>
                   </div>
@@ -82,16 +82,17 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div className="contact__info--content">
-                      <h3 className="contact__info--content__title mb-5">
+                      <h3 className="contact__info--content__title mb-1">
                         E-mail
                       </h3>
                       <p className="contact__info--content__desc">
-                        {" "}
-                        <a href="mailto:info@example.com">
-                          info@example.com
-                        </a>{" "}
-                        <br />{" "}
-                        <a href="mailto:info@example.com">info@example.com</a>
+                   
+                        <a href="mailto:godmother.aquila@gmail.com
+">
+                        godmother.aquila@gmail.com
+
+                        </a>
+                        
                       </p>
                     </div>
                   </div>

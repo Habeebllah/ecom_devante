@@ -9,50 +9,38 @@ import logo from "../assets/img/logo/nav-logo.png";
 import product1 from "../assets/img/product/product1.png";
 import product2 from "../assets/img/product/product2.png";
 import { Link, Outlet } from "react-router-dom";
-import Shipping from "./shipping";
+
 import Footer from "./footer";
-import { CartContext } from '../cartContext';
+import { CartContext } from "../cartContext";
 
 const Header = () => {
   const { cartItems } = useContext(CartContext);
   return (
     <>
       <header className="header__section">
-        <div className="header__topbar bg__secondary" >
+        <div className="header__topbar" style={{backgroundColor:"#000000"}}>
           <div className="container-fluid">
             <div className="header__topbar--inner d-flex align-items-center justify-content-between">
               <div className="header__shipping">
                 <ul className="header__shipping--wrapper d-flex">
                   <li className="header__shipping--text text-white">
-                    Welcome to Devanty Couture online Store
+                  Welcome to Devanti Couture Online Store
                   </li>
-                
+
                   <li className="header__shipping--text text-white d-sm-2-none">
-                    <img
-                      className="header__shipping--text__icon"
-                      src={img2}
-                      alt="email-icon"
-                    />
-                    <a
-                      className="header__shipping--text__link"
-                      href="mailto:demo@gmail.com"
-                    >
-                      demo@gmail.com
-                    </a>
+                   
+                    
+       ... Story of royalties
+
+                   
                   </li>
                 </ul>
               </div>
               <div className="language__currency d-none d-lg-block">
                 <ul className="d-flex align-items-center">
-                <li className="header__shipping--text text-white d-sm-2-none">
-                    <img
-                      className="header__shipping--text__icon"
-                      src={img1}
-                      alt="bus-icon"
-                    />{" "}
-                    Track Your Order
+                <li className="header__shipping--text text-white">
+                We open from: Monday - Saturdays,  9:00AM to 7:00PM
                   </li>
-                 
                 </ul>
               </div>
             </div>
@@ -60,7 +48,7 @@ const Header = () => {
         </div>
         <div className="main__header header__sticky">
           <div className="container-fluid">
-            <div className="main__header--inner position__relative d-flex justify-content-between align-items-center">
+            <div className="header__bottom--inner position__relative d-none d-lg-flex justify-content-between align-items-center">
               <div className="offcanvas__header--menu__open ">
                 <a
                   className="offcanvas__header--menu__open--btn"
@@ -86,7 +74,13 @@ const Header = () => {
               </div>
               <div className="main__logo">
                 <Link className="main__logo--link" to="/">
-                  <img className="main__logo--img" src={logo} alt="logo-img" width={"200px"} height={"200px"} />
+                  <img
+                    className="main__logo--img"
+                    src={logo}
+                    alt="logo-img"
+                    width={"200px"}
+                    height={"200px"}
+                  />
                 </Link>
               </div>
               <div className="header__search--widget header__sticky--none d-none d-lg-block">
@@ -114,7 +108,6 @@ const Header = () => {
                       className="header__search--button  text-white"
                       type="submit"
                       aria-label="search button"
-                    
                     >
                       <svg
                         className="header__search--button__svg"
@@ -145,7 +138,7 @@ const Header = () => {
               </div>
               <div className="header__account header__sticky--none">
                 <ul className="d-flex">
-                  <li className="header__account--items" >
+                  <li className="header__account--items">
                     <Link className="header__account--btn" to="account">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -170,11 +163,11 @@ const Header = () => {
                         />
                       </svg>
                       <span className="header__account--btn__text">
-                        My Account
+                       Login
                       </span>
                     </Link>
                   </li>
-                 
+
                   <Link className="header__account--items" to="cart">
                     <a
                       className="header__account--btn minicart__open--btn"
@@ -372,12 +365,12 @@ const Header = () => {
         </div>
         <div className="header__bottom">
           <div className="container-fluid">
-            <div className="header__bottom--inner position__relative d-none d-lg-flex justify-content-between align-items-center">
+            <div className="header__bottom--inner position__relative d-none d-lg-flex justify-content-center align-items-center">
               <div className="header__menu">
                 <nav className="header__menu--navigation">
                   <ul className="d-flex">
                     <li className="header__menu--items">
-                      <Link className="header__menu--link" to="/">
+                      <Link className="header__menu--link" to="/" style={{color:"#FFAF06"}}>
                         Home
                       </Link>
                     </li>
@@ -388,26 +381,18 @@ const Header = () => {
                     </li>
                     <li className="header__menu--items">
                       <Link className="header__menu--link" to="about">
-                        About US{" "}
+                        About Us{" "}
                       </Link>
                     </li>
 
                     <li className="header__menu--items">
                       <Link className="header__menu--link" to="contact">
-                        Contact{" "}
+                        Contact Us{" "}
                       </Link>
                     </li>
                   </ul>
                 </nav>
               </div>
-              <p className="header__discount--text">
-                <img
-                  className="header__discount--icon__img"
-                  src={img5}
-                  alt="lamp-img"
-                />{" "}
-                Special up to 60% Off all item
-              </p>
             </div>
           </div>
         </div>
@@ -942,10 +927,10 @@ const Header = () => {
       </header>
 
       <main>
-        <Outlet/>
+        <Outlet />
       </main>
 
-      <Shipping />
+   
       <Footer />
     </>
   );
