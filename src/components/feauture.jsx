@@ -1,12 +1,12 @@
 import React from "react";
-import img1 from "../assets/img/banner/banner14.png";
-import img2 from "../assets/img/product/small-product1.png";
+import img1 from "../assets/img/product/product1.svg";
+import img2 from "../assets/img/product/product5.svg";
 import img3 from "../assets/img/product/small-product2.png";
 import img4 from "../assets/img/product/small-product3.png";
 import img5 from "../assets/img/product/small-product4.png";
 import img6 from "../assets/img/product/small-product5.png";
 import img7 from "../assets/img/product/small-product6.png";
-import img8 from "../assets/img/banner/banner15.png";
+
 import { Link } from "react-router-dom";
 
 const Feauture = () => {
@@ -420,7 +420,7 @@ const Feauture = () => {
                 >
                   <img
                     className="banner__items--thumbnail__img md-width-100"
-                    src={img1}
+                    src={img2}
                     alt="banner-img"
                   />
                 </a>

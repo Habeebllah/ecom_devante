@@ -1,4 +1,9 @@
-import img1 from "../src/assets/img/product/product1.png";
+import img1 from "../src/assets/img/product/product1.svg";
+import img2 from "../src/assets/img/product/product2.svg";
+import img3 from "../src/assets/img/product/product3.svg";
+import img4 from "../src/assets/img/product/product4.svg";
+import img5 from "../src/assets/img/product/product5.svg";
+import img6 from "../src/assets/img/product/product6.svg";
 
 export const PRODUCTS = [
   {
@@ -14,7 +19,7 @@ export const PRODUCTS = [
 
   {
     id: 2,
-    img: img1,
+    img: img2,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "  Boxy Denim Jacket",
@@ -24,7 +29,7 @@ export const PRODUCTS = [
   },
   {
     id: 3,
-    img: img1,
+    img: img5,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "Square Shoulder Bag",
@@ -46,7 +51,7 @@ export const PRODUCTS = [
   {
     id: 5,
 
-    img: img1,
+    img: img6,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "Oversize Cotton Dress",
@@ -56,7 +61,7 @@ export const PRODUCTS = [
   },
   {
     id: 6,
-    img: img1,
+    img: img4,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "Oversize Cotton Dress",
@@ -67,7 +72,7 @@ export const PRODUCTS = [
   {
     id: 7,
 
-    img: img1,
+    img: img2,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "Oversize Cotton Dress",
@@ -79,7 +84,7 @@ export const PRODUCTS = [
   {
     id: 8,
 
-    img: img1,
+    img: img2,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "Oversize Cotton Dress",
@@ -89,7 +94,7 @@ export const PRODUCTS = [
   },
   {
     id: 9,
-    img: img1,
+    img: img3,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "Oversize Cotton Dress",
@@ -99,7 +104,7 @@ export const PRODUCTS = [
   },
   {
     id: 10,
-    img: img1,
+    img: img4,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "Oversize Cotton Dress",
@@ -110,7 +115,7 @@ export const PRODUCTS = [
 
   {
     id: 11,
-    img: img1,
+    img: img5,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "Oversize Cotton Dress",
@@ -120,7 +125,7 @@ export const PRODUCTS = [
   },
   {
     id: 12,
-    img: img1,
+    img: img6,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "Oversize Cotton Dress",
@@ -140,7 +145,7 @@ export const PRODUCTS = [
   },
   {
     id: 14,
-    img: img1,
+    img: img5,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "Oversize Cotton Dress",
@@ -150,7 +155,7 @@ export const PRODUCTS = [
   },
   {
     id: 15,
-    img: img1,
+    img: img3,
     sale: "sale",
     title: "Jacket, Women",
     product_title: "Oversize Cotton Dress",
@@ -169,9 +174,3 @@ export const PRODUCTS = [
     color: "blue",
   },
 ];
-
-
-
-
-
-
