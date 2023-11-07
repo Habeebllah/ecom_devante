@@ -23,6 +23,8 @@ import Account from "./pages/account";
 import Dashboard from "./pages/dashboard";
 import Address from "./pages/address";
 import SignIn from "./auth/signin";
+import TrackyourOrder from "./pages/trackyourOrder";
+import Profile from "./pages/profile";
 
 function App() {
   return (
@@ -46,11 +48,14 @@ function App() {
             <Route path="signup" element={<SignIn />}></Route>
             <Route path="account" element={<Account />}></Route>
             <Route path="dashboard" element={<Dashboard />}></Route>
+            <Route path="profile" element={<Profile />}></Route>
+
+            <Route path="track-your-order" element={<TrackyourOrder />}></Route>
 
             <Route path="*" element={<NotFound />}></Route>
           </Route>
           <Route path="/checkout/:id" element={<CheckoutWithId />}></Route>
-          <Route path="checkout" element={<Checkout  />}></Route>
+          <Route path="checkout" element={<Checkout />}></Route>
         </Routes>
       </CartProvider>
     </>

@@ -94,7 +94,7 @@ const Footer = () => {
 
               <ul className="footer__widget--menu footer__widget--inner">
                 <li className="footer__widget--menu__list">
-                  <Link className="footer__widget--menu__text" to="about">
+                  <Link className="footer__widget--menu__text" to="/about">
                     About Us
                   </Link>
                 </li>
@@ -117,14 +117,14 @@ const Footer = () => {
 
               <ul className="footer__widget--menu footer__widget--inner">
                 <li className="footer__widget--menu__list">
-                  <Link className="footer__widget--menu__text" to="profile">
+                  <Link className="footer__widget--menu__text" to="/profile">
                     Profile
                   </Link>
                 </li>
                 <li className="footer__widget--menu__list">
                   <Link
                     className="footer__widget--menu__text"
-                    to="/track-ur-order"
+                    to="/track-your-order"
                   >
                     Track Order
                   </Link>
