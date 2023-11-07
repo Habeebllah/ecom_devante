@@ -1,11 +1,8 @@
 import React from "react";
-import img1 from "..//assets/img/other/instagram1.webp";
-import img2 from "..//assets/img/other/instagram2.webp";
-import img3 from "..//assets/img/other/instagram3.webp";
-import img4 from "..//assets/img/other/instagram4.webp";
-import img5 from "..//assets/img/other/instagram5.webp";
-import img6 from "..//assets/img/other/instagram6.webp";
+
 import { AiFillFacebook } from "react-icons/ai";
+import vector from "../assets/img/logo/Vector.png"
+
 import { BsTwitter } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
@@ -108,6 +105,22 @@ const Footer = () => {
                     Shop
                   </Link>
                 </li>
+                <li className="footer__widget--menu__list">
+                  <Link
+                    className="footer__widget--menu__text"
+                    to="privacy/policy"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li className="footer__widget--menu__list">
+                  <Link
+                    className="footer__widget--menu__text"
+                    to="terms-and-condition"
+                  >
+                    Terms & Conditions
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="footer__widget">
@@ -184,8 +197,9 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer__bottom d-flex justify-content-between align-items-center">
-            <p className="copyright__content text-ofwhite m-0">
-              @2023 Devanti Couture. All rights reserved.
+
+            <p className="copyright__content text-ofwhite m-0" style={{display:"flex" , alignItems:"center" , gap:"7px"}}>
+            <img src={vector} alt=""  />   2023 Devanti Couture. All rights reserved.
             </p>
 
             <div className="footer__widget--inner footer__social--style3">
