@@ -1,165 +1,178 @@
-import React from "react";
+import React, { useState } from "react";
+import { useFormik } from "formik";
+import { loginSchema } from "../schemas/validation";
+import { ToastContainer, toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
+import { Axios } from "../config";
+import requests from "../lib/requests";
 const Login = () => {
+  const [rememberMe, setRememberMe] = useState(false);
+
+  const [formSubmit, setFormSubmit] = useState([]);
+
+  const PostContact = async (formData) => {
+    try {
+      const res = await Axios.post(requests.login, formData);
+      setFormSubmit(res.data);
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const initialValues = {
+    email: "",
+    password: "",
+  };
+  const onSubmit = (values) => {
+    if (errors.email || errors.password) {
+      toast.error("Please fill out all fields correctly");
+      return;
+    }
+
+    if (!rememberMe) {
+      toast.error("Please remember me");
+      return;
+    }
+
+    // Assuming the form submission was successful
+
+    PostContact(values); // Pass the form values to PostContact
+    toast.success("Form submitted successfully");
+    console.log("Form submitted successfully");
+
+    // Log the form values
+    console.log("Form Values:", values);
+    // Any additional logic after form submission.
+  };
+
+  const {
+    handleChange,
+    values,
+    handleBlur,
+    handleSubmit,
+    isSubmitting,
+    errors,
+    touched,
+  } = useFormik({
+    initialValues,
+    validationSchema: loginSchema,
+    onSubmit,
+  });
+
+  const getError = (key) => {
+    return touched[key] && errors[key];
+  };
   return (
     <>
       <main className="main__content_wrapper">
-        {/* 
-      <!-- Start breadcrumb section --> */}
-        <section className="breadcrumb__section breadcrumb__bg">
-          <div className="container">
-            <div className="row row-cols-1">
-              <div className="col">
-                
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* <!-- End breadcrumb section --> */}
-
-        {/* <!-- Start login section  --> */}
         <div className="login__section section--padding">
           <div className="container">
-            <form action="#">
+            <form
+              action="#"
+              onSubmit={handleSubmit}
+              className={`${
+                errors.email && errors.password ? "gap-2" : "gap-4"
+              }`}
+            >
               <div className="login__section--inner">
-                <div className="row row-cols-md-2 row-cols-1">
-                  <div className="col">
-                    <div className="account__login">
-                      <div className="account__login--header mb-25">
-                        <h2 className="account__login--header__title h3 mb-10">
-                          Login
-                        </h2>
-                        <p className="account__login--header__desc">
-                          Login if you area a returning customer.
-                        </p>
-                      </div>
-                      <div className="account__login--inner">
-                        <input
-                          className="account__login--input"
-                          placeholder="Email Addres"
-                          type="text"
-                        />
-                        <input
-                          className="account__login--input"
-                          placeholder="Password"
-                          type="password"
-                        />
-                        <div className="account__login--remember__forgot mb-15 d-flex justify-content-between align-items-center">
-                          <div className="account__login--remember position__relative">
-                            <input
-                              className="checkout__checkbox--input"
-                              id="check1"
-                              type="checkbox"
-                            />
-                            <span className="checkout__checkbox--checkmark"></span>
-                            <label
-                              className="checkout__checkbox--label login__remember--label"
-                              for="check1"
-                            >
-                              Remember me
-                            </label>
-                          </div>
-                          <button
-                            className="account__login--forgot"
-                            type="submit"
-                          >
-                            Forgot Your Password?
-                          </button>
-                        </div>
-                        <button
-                          className="account__login--btn primary__btn"
-                          type="submit"
-                        >
-                          Login
-                        </button>
-                        <div className="account__login--divide">
-                          <span className="account__login--divide__text">
-                            OR
-                          </span>
-                        </div>
-                        <div className="account__social d-flex justify-content-center mb-15">
-                          <a
-                            className="account__social--link facebook"
-                       
-                            href="https://www.facebook.com"
-                          >
-                            Facebook
-                          </a>
-                          <a
-                            className="account__social--link google"
-                           href="#"
-                      
-                          >
-                            Google
-                          </a>
-                          <a
-                            className="account__social--link twitter"
-                        
-                            href="https://twitter.com"
-                          >
-                            Twitter
-                          </a>
-                        </div>
-                        <p className="account__login--signup__text">
-                          Don,t Have an Account?{" "}
-                          <button type="submit">Sign up now</button>
-                        </p>
-                      </div>
-                    </div>
+                <div className="account__login">
+                  <div className="account__login--header mb-25">
+                    <h2 className="account__login--header__title h3 mb-10">
+                      Login
+                    </h2>
+                    <p className="account__login--header__desc">
+                      Login if you area a returning customer.
+                    </p>
                   </div>
-                  <div className="col">
-                    <div className="account__login register">
-                      <div className="account__login--header mb-25">
-                        <h2 className="account__login--header__title h3 mb-10">
-                          Create an Account
-                        </h2>
-                        <p className="account__login--header__desc">
-                          Register here if you are a new customer
-                        </p>
-                      </div>
-                      <div className="account__login--inner">
+                  <div className="account__login--inner">
+                    <input
+                      className="account__login--input"
+                      placeholder="Email Address"
+                      id="email"
+                      type="email"
+                      value={values.email}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      error={getError("email")}
+                    />
+                    <input
+                      className={` account__login--input ${
+                        errors.password && touched.password ? "password" : ""
+                      }`}
+                      placeholder="Password"
+                      type="password"
+                      id="password"
+                      name="password"
+                      value={values.password}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      autoComplete="off"
+                    />
+                    {errors.password && touched.password && (
+                      <div className="error">{errors.password}</div>
+                    )}
+                    <div className="account__login--remember__forgot mb-15 d-flex justify-content-between align-items-center">
+                      <div className="account__login--remember position__relative">
                         <input
-                          className="account__login--input"
-                          placeholder="Username"
-                          type="text"
+                          className="checkout__checkbox--input"
+                          id="check1"
+                          type="checkbox"
+                          checked={rememberMe}
+                          onChange={() => setRememberMe(!rememberMe)}
                         />
-                        <input
-                          className="account__login--input"
-                          placeholder="Email Addres"
-                          type="text"
-                        />
-                        <input
-                          className="account__login--input"
-                          placeholder="Password"
-                          type="password"
-                        />
-                        <input
-                          className="account__login--input"
-                          placeholder="Confirm Password"
-                          type="password"
-                        />
-                        <button
-                          className="account__login--btn primary__btn mb-10"
-                          type="submit"
+                        <span className="checkout__checkbox--checkmark"></span>
+                        <label
+                          className="checkout__checkbox--label login__remember--label"
+                          for="check1"
                         >
-                          Submit & Register
-                        </button>
-                        <div className="account__login--remember position__relative">
-                          <input
-                            className="checkout__checkbox--input"
-                            id="check2"
-                            type="checkbox"
-                          />
-                          <span className="checkout__checkbox--checkmark"></span>
-                          <label
-                            className="checkout__checkbox--label login__remember--label"
-                            for="check2"
-                          >
-                            I have read and agree to the terms & conditions
-                          </label>
-                        </div>
+                          Remember me
+                        </label>
                       </div>
+                      <button className="account__login--forgot" type="submit">
+                        Forgot Your Password?
+                      </button>
                     </div>
+                    <button
+                      className="account__login--btn primary__btn"
+                      type="submit"
+                    >
+                      Login
+                    </button>
+                    <div className="account__login--divide">
+                      <span className="account__login--divide__text">OR</span>
+                    </div>
+                    <div className="account__social d-flex justify-content-center mb-15">
+                      <a
+                        className="account__social--link facebook"
+                        target="_blank"
+                        href="https://www.facebook.com"
+                      >
+                        Facebook
+                      </a>
+                      <a
+                        className="account__social--link google"
+                        target="_blank"
+                        href="https://www.google.com"
+                      >
+                        Google
+                      </a>
+                      <a
+                        className="account__social--link twitter"
+                        target="_blank"
+                        href="https://twitter.com"
+                      >
+                        Twitter
+                      </a>
+                    </div>
+                    <p className="account__login--signup__text">
+                      Don,t Have an Account?{" "}
+                      <Link to="/signup">
+                        <button type="submit">Sign up now</button>
+                      </Link>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -167,9 +180,8 @@ const Login = () => {
           </div>
         </div>
         {/* <!-- End login section  --> */}
-
-   
       </main>
+      <ToastContainer />
     </>
   );
 };

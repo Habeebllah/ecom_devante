@@ -22,6 +22,7 @@ import CheckoutWithId from "./pages/checkoutWithId";
 import Account from "./pages/account";
 import Dashboard from "./pages/dashboard";
 import Address from "./pages/address";
+import SignIn from "./auth/signin";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             <Route path="cart" element={<Cart />}></Route>
 
             <Route path="login" element={<Login />}></Route>
+            <Route path="signup" element={<SignIn />}></Route>
             <Route path="account" element={<Account />}></Route>
             <Route path="dashboard" element={<Dashboard />}></Route>
 

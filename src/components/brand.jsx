@@ -14,7 +14,7 @@ const Brand = () => {
         <div className="container-fluid">
 
         <div className="text-center mb-35">
-            <h2 className="section__heading--maintitle style2 text-white">
+            <h2 className="section__heading--maintitle style2 text-black">
           Top Brands
             </h2>
           </div>

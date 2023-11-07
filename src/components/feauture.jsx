@@ -13,18 +13,16 @@ const Feauture = () => {
   return (
     <>
       <section
-        className="product__section section--padding color-scheme-2" 
-        style={{ backgroundColor: "#000000" , padding:"50px 50px"}}
+        className="product__section section--padding color-scheme-2"
+        style={{ backgroundColor: "#000000", padding: "50px 50px" }}
       >
         <div className="container-fluid">
           <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb--n30">
-           
-  
-          <div className="col mb-35">
+            <div className="col mb-35">
               <div className="banner__items position__relative">
                 <div className="product__grid--heading">
                   <h2 className="product__grid--heading__maintitle position__relative text-white">
-                    Newly Arrivals
+                    Best Sellers
                   </h2>
                 </div>
                 <a
@@ -60,12 +58,12 @@ const Feauture = () => {
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html"> Durable Steel Knife</a>
+                        <a href="product-details.html"> Insert Product Name</a>
                       </h3>
                       <div className="product__items--price">
-                        <span className="current__price">$110</span>
+                        <span className="current__price">₦110</span>
                         <span className="price__divided"></span>
-                        <span className="old__price">$78</span>
+                        <span className="old__price">₦$78</span>
                       </div>
                       <ul className="rating product__rating d-flex">
                         <li className="rating__list">
@@ -115,7 +113,8 @@ const Feauture = () => {
                             >
                               <path
                                 data-name="star - Copy"
-                                d="M9.837,3.5,6.73,3.039,5.338.179a.335.335,0,0,0-.571,0L3.375,3.039.268,3.5a.3.3,0,0,0-.178.514L2.347,6.242,1.813,9.4a.314.314,0,0,0,.464.316L5.052,8.232,7.827,9.712A.314.314,0,0,0,8.292,9.4L7.758,6.242l2.257-2.231A.3.3,0,0,0,9.837,3.5Z"
+                                d="M9.837,3.5,6.73,3.039,5.338.179a.335.335,0,0,0-
+                                z.571,0L3.375,3.039.268,3.5a.3.3,0,0,0-.178.514L2.347,6.242,1.813,9.4a.314.314,0,0,0,.464.316L5.052,8.232,7.827,9.712A.314.314,0,0,0,8.292,9.4L7.758,6.242l2.257-2.231A.3.3,0,0,0,9.837,3.5Z"
                                 transform="translate(0 -0.018)"
                                 fill="currentColor"
                               ></path>
@@ -181,12 +180,12 @@ const Feauture = () => {
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html"> Durable Steel Knife</a>
+                        <a href="product-details.html">Insert Product Name</a>
                       </h3>
                       <div className="product__items--price">
-                        <span className="current__price">$140</span>
+                        <span className="current__price">₦140</span>
                         <span className="price__divided"></span>
-                        <span className="old__price">$115</span>
+                        <span className="old__price">₦115</span>
                       </div>
                       <ul className="rating product__rating d-flex">
                         <li className="rating__list">
@@ -302,12 +301,12 @@ const Feauture = () => {
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html"> Durable Steel Knife</a>
+                        <a href="product-details.html"> Insert Product Name</a>
                       </h3>
                       <div className="product__items--price">
-                        <span className="current__price">$160</span>
+                        <span className="current__price">₦160</span>
                         <span className="price__divided"></span>
-                        <span className="old__price">$118</span>
+                        <span className="old__price">₦118</span>
                       </div>
                       <ul className="rating product__rating d-flex">
                         <li className="rating__list">
@@ -447,12 +446,12 @@ const Feauture = () => {
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html"> Durable Steel Knife</a>
+                        <a href="product-details.html"> Insert Product Name</a>
                       </h3>
                       <div className="product__items--price">
-                        <span className="current__price">$110</span>
+                        <span className="current__price">₦110</span>
                         <span className="price__divided"></span>
-                        <span className="old__price">$78</span>
+                        <span className="old__price">₦78</span>
                       </div>
                       <ul className="rating product__rating d-flex">
                         <li className="rating__list">
@@ -568,12 +567,12 @@ const Feauture = () => {
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html"> Durable Steel Knife</a>
+                        <a href="product-details.html"> Insert Product Name</a>
                       </h3>
                       <div className="product__items--price">
-                        <span className="current__price">$140</span>
+                        <span className="current__price">₦140</span>
                         <span className="price__divided"></span>
-                        <span className="old__price">$115</span>
+                        <span className="old__price">₦115</span>
                       </div>
                       <ul className="rating product__rating d-flex">
                         <li className="rating__list">
@@ -689,12 +688,12 @@ const Feauture = () => {
                     </div>
                     <div className="product__items--grid__content">
                       <h3 className="product__items--content__title h4">
-                        <a href="product-details.html"> Durable Steel Knife</a>
+                        <a href="product-details.html">Insert Product Name</a>
                       </h3>
                       <div className="product__items--price">
-                        <span className="current__price">$160</span>
+                        <span className="current__price">₦160</span>
                         <span className="price__divided"></span>
-                        <span className="old__price">$118</span>
+                        <span className="old__price">₦118</span>
                       </div>
                       <ul className="rating product__rating d-flex">
                         <li className="rating__list">

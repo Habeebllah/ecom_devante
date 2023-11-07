@@ -287,12 +287,14 @@ const Contact = () => {
         <div class="contact__map--area section--padding pt-0">
           <iframe
             class="contact__map--iframe"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7887.465355142307!2d-0.13384360843222626!3d51.4876034467734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760532743b90e1%3A0x790260718555a20c!2sU.S.%20Embassy%2C%20London!5e0!3m2!1sen!2sbd!4v1632035375945!5m2!1sen!2sbd"
+            src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3958.87308370327!2d3.336230674998593!3d7.140671842863503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d7.1409025999999995!2d3.3405939!4m5!1s0x103a4c767b8e725b%3A0xcfcbddbb8b59d9bf!2sgoogle%20map%20for%20this%20location%20Shop%2038%2F34%20Omida%20shopping%20complex%20Omida%2C%20Abeokuta%2C%20Ogun%20state.!3m2!1d7.1396453!2d3.3367237999999997!5e0!3m2!1sen!2sng!4v1699348764442!5m2!1sen!2sng"
             style={{ border: "0" }}
             title="Google map"
             allowfullscreen=""
             loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+
         </div>
         {/* <!-- End contact map area --> */}
 

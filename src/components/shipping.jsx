@@ -13,7 +13,7 @@ const Shipping = () => {
             className="section__heading--maintitle style2"
             style={{ position: "relative", top: "50px" }}
           >
-            Easy Steps To Get Your Order To Your Door Step
+           Four Easy Steps To Get Your Order To Your Door Step
           </h2>
         </div>
         <section class="shipping__section2 shipping__style3 section--padding" style={{paddingTop:"6rem"}}>

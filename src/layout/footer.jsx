@@ -193,7 +193,7 @@ const Footer = () => {
                 className="social__shear"
                 style={{ position: "relative", top: "10px" }}
               >
-                <li className="social__shear--list">
+                {/* <li className="social__shear--list">
                   <a
                     className="social__shear--list__icon"
                     target="_blank"
@@ -201,12 +201,12 @@ const Footer = () => {
                   >
                     <BsTwitter color="white" fontSize="22px" />
                   </a>
-                </li>
+                </li> */}
                 <li className="social__shear--list">
                   <a
                     className="social__shear--list__icon"
                     target="_blank"
-                    href="http://wa.me/message/AXDEBWAGASAYE1"
+                    href="https://wa.me/message/L7X6WRVH3WAVP1"
                   >
                     <BsWhatsapp color="white" fontSize="22px" />
                   </a>
@@ -215,12 +215,12 @@ const Footer = () => {
                   <a
                     className="social__shear--list__icon"
                     target="_blank"
-                    href="https://www.facebook.com/medmallpharm"
+                    href="https://www.facebook.com/profile.php?id=100054852456392&mibextid=LQQJ4d"
                   >
                     <AiFillFacebook color="white" fontSize="22px" />
                   </a>
                 </li>
-                <li className="social__shear--list">
+                {/* <li className="social__shear--list">
                   <a
                     className="social__shear--list__icon"
                     target="_blank"
@@ -228,12 +228,12 @@ const Footer = () => {
                   >
                     <BsLinkedin color="white" fontSize="22px" />
                   </a>
-                </li>
+                </li> */}
                 <li className="social__shear--list">
                   <a
                     className="social__shear--list__icon"
                     target="_blank"
-                    href="https://instagram.com/medmall_pharmacy?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
+                    href="https://instagram.com/devantijewellery?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
                   >
                     <BsInstagram color="white" fontSize="22px" />
                   </a>

@@ -258,7 +258,7 @@ const Cart = () => {
         <section className="product__section section--padding pt-0">
           <div className="container-fluid">
             <div className="section__heading text-center mb-50">
-              <h2 className="section__heading--maintitle">New Products</h2>
+              <h2 className="section__heading--maintitle">You may also like</h2>
             </div>
             <div className="product__section--inner product__swiper--activation swiper">
               <div className="swiper-wrapper">

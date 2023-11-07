@@ -1921,27 +1921,27 @@ body.overlay__active::before,
 
 /* Section padding */
 .section--padding {
-  padding-top: 3rem;
+  padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
 @media only screen and (min-width: 768px) {
   .section--padding {
-    padding-top: 4rem;
+    padding-top: 7rem;
     padding-bottom: 7rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .section--padding {
-    padding-top: 4rem;
+    padding-top: 8rem;
     padding-bottom: 8rem;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .section--padding {
-    padding-top: 4rem;
+    padding-top: 9rem;
     padding-bottom: 9rem;
   }
 }
@@ -6321,15 +6321,15 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-/* .testimonial__items {
+.testimonial__items {
   padding: 22px 18px;
   background: var(--white-color);
   border-radius: 1rem;
   -webkit-box-shadow: 2px 0 20px rgba(0, 0, 0, 0.06);
   box-shadow: 2px 0 20px rgba(0, 0, 0, 0.06);
-} */
+}
 
-/* @media only screen and (min-width: 1200px) {
+ @media only screen and (min-width: 1200px) {
   .testimonial__items {
     padding: 3rem;
   }
@@ -6345,7 +6345,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .testimonial__items {
     padding: 4rem 4.5rem;
   }
-} */
+} 
 
 .testimonial__items:hover .testimonial__items--thumbnail__img {
   border-color: var(--secondary-color);
@@ -6430,13 +6430,13 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-/* .testimonial__bg {
+.testimonial__bg {
   background: url(../src/assets/img/banner/banner-bg3.png);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-} */
+}
 
 /* .testimonial__bg::before {
   position: absolute;
@@ -12084,15 +12084,20 @@ details > summary::-webkit-details-marker {
 */
 .account__login {
   background: var(--white-color);
+  margin: 0px auto;
+  width: 100%;
+  position: relative;
+  top: -50px;
   padding: 2.5rem;
   border-radius: 1rem;
   -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (min-width: 992px) {
   .account__login {
     padding: 3rem;
+    width: 600px;
   }
 }
 

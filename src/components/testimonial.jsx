@@ -8,19 +8,19 @@ import "slick-carousel/slick/slick-theme.css";
 
 const testimonials = [
   {
-    name: "Ibukunoluwa",
+    name: "FlakkyJojo",
     role: "Entrepreneur",
     content: "I have been a loyal customer of Devanti for a while, and I can't speak highly enough about their exceptional service and knowledgeable staff.",
     image: img1,
   },
   {
-    name: "Ibukunoluwa",
+    name: "FlakkyJojo",
     role: "Entrepreneur",
     content: "I have been a loyal customer of Devanti for a while, and I can't speak highly enough about their exceptional service and knowledgeable staff.",
     image: img2,
   },
   {
-    name: "Ibukunoluwa",
+    name: "FlakkyJojo",
     role: "Entrepreneur",
     content: "I have been a loyal customer of Devanti for a while, and I can't speak highly enough about their exceptional service and knowledgeable staff.",
     image: img3,
@@ -34,7 +34,7 @@ const Testimonial = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows:false,
+    arrows:true,
     autoplay: true, // Set to true for automatic sliding
     autoplaySpeed: 2000, // Set the interval (in milliseconds)
     
@@ -44,7 +44,7 @@ const Testimonial = () => {
     <>
       
 
-<section className="testimonial__section  position__relative section--padding color-scheme-2" style={{backgroundColor:"#000000"}}>
+<section className="testimonial__section  testimonial__bg position__relative section--padding color-scheme-2">
       <div className="container">
       <div className=" text-center  mb-35">
             <h2 className="section__heading--maintitle style2 text-white">
