@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import img1 from "../assets/img/icon/bus.png";
 
 import img2 from "../assets/img/icon/email.png";
@@ -13,50 +13,51 @@ import Footer from "./footer";
 import { CartContext } from "../cartContext";
 
 const Header = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
   const { cartItems } = useContext(CartContext);
   return (
     <>
-      <header className="header__section">
-        <div className="header__topbar" style={{backgroundColor:"#000000"}}>
-          <div className="container-fluid">
-            <div className="header__topbar--inner d-flex align-items-center justify-content-between">
-              <div className="header__shipping">
-                <ul className="header__shipping--wrapper d-flex">
-                  <li className="header__shipping--text text-white">
-                  Welcome to Devanti Couture Online Store
-                  </li>
-
-                  <li className="header__shipping--text text-white d-sm-2-none">
-                   
-                    
-       ... Story of royalties
-
-                   
-                  </li>
-                </ul>
+      <header class="header__section color-scheme-2">
+        <div class="header__topbar " style={{ backgroundColor: "#000000" }}>
+          <div class="container-fluid">
+            <div class="header__topbar--inner d-flex align-items-center justify-content-between">
+              <div class="header__shipping">
+                <p class="header__shipping--text text-white">
+                  Welcome to Devanti Couture Online Store{" "}
+                  <span style={{ color: "#FFC107" }}>|</span>{" "}
+                  <span style={{ fontSize: "14px" }}>
+                    {" "}
+                    ... Story of royalties
+                  </span>
+                </p>
               </div>
-              <div className="language__currency d-none d-lg-block">
-                <ul className="d-flex align-items-center">
-                <li className="header__shipping--text text-white">
-                We open from: Monday - Saturdays,  9:00AM to 7:00PM
+              <div class="language__currency d-none d-lg-block">
+                <ul class="d-flex align-items-center">
+                  <li class="header__shipping--text text-white">
+                    We open from: Monday - Saturdays, 9:00AM to 7:00PM
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <div className="main__header header__sticky">
-          <div className="container-fluid">
-            <div className="header__bottom--inner position__relative d-none d-lg-flex justify-content-between align-items-center">
-              <div className="offcanvas__header--menu__open ">
+        <div class="main__header header__sticky">
+          <div class="container-fluid">
+            <div class="main__header--inner position__relative d-flex justify-content-between align-items-center">
+              <div class="offcanvas__header--menu__open ">
                 <a
-                  className="offcanvas__header--menu__open--btn"
-                  href="#"
-                  data-offcanvas
+                  class="offcanvas__header--menu__open--btn"
+                  
+                
+                  onClick={toggleMenu}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="ionicon offcanvas__header--menu__open--svg"
+                    class="ionicon offcanvas__header--menu__open--svg"
                     viewBox="0 0 512 512"
                   >
                     <path
@@ -68,24 +69,26 @@ const Header = () => {
                       d="M80 160h352M80 256h352M80 352h352"
                     />
                   </svg>
-                  <span className="visually-hidden">Menu Open</span>
+                  <span class="visually-hidden">Menu Open</span>
                 </a>
               </div>
-              <div className="main__logo">
-                <Link className="main__logo--link" to="/">
-                  <img
-                    className="main__logo--img"
-                    src={logo}
-                    alt="logo-img"
-                    width={"200px"}
-                    height={"200px"}
-                  />
-                </Link>
+              <div class="main__logo">
+                <h1 class="main__logo--title">
+                  <a class="main__logo--link" href="index.html">
+                    <img
+                      class="main__logo--img"
+                      src={logo}
+                      alt="logo-img"
+                      width={"200px"}
+                      height={"200px"}
+                    />
+                  </a>
+                </h1>
               </div>
-              <div className="header__search--widget header__sticky--none d-none d-lg-block">
-                <form className="d-flex header__search--form" action="#">
-                  <div className="header__select--categories select">
-                    <select className="header__select--inner">
+              <div class="header__search--widget header__sticky--none d-none d-lg-block">
+                <form class="d-flex header__search--form" action="#">
+                  <div class="header__select--categories select">
+                    <select class="header__select--inner">
                       <option selected value="1">
                         All Categories
                       </option>
@@ -95,21 +98,21 @@ const Header = () => {
                       <option value="5">Butters & Eggs </option>
                     </select>
                   </div>
-                  <div className="header__search--box">
+                  <div class="header__search--box">
                     <label>
                       <input
-                        className="header__search--input"
+                        class="header__search--input"
                         placeholder="Keyword here..."
                         type="text"
                       />
                     </label>
                     <button
-                      className="header__search--button  text-white"
+                      class="header__search--button bg__secondary text-white"
                       type="submit"
                       aria-label="search button"
                     >
                       <svg
-                        className="header__search--button__svg"
+                        class="header__search--button__svg"
                         xmlns="http://www.w3.org/2000/svg"
                         width="27.51"
                         height="26.443"
@@ -135,10 +138,10 @@ const Header = () => {
                   </div>
                 </form>
               </div>
-              <div className="header__account header__sticky--none">
-                <ul className="d-flex">
-                  <li className="header__account--items">
-                    <Link className="header__account--btn" to="login">
+              <div class="header__account header__sticky--none">
+                <ul class="d-flex">
+                  <li class="header__account--items">
+                    <Link class="header__account--btn" to="login">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="26.51"
@@ -161,16 +164,14 @@ const Header = () => {
                           stroke-width="32"
                         />
                       </svg>
-                      <span className="header__account--btn__text">
-                       Login
-                      </span>
+                      <span class="header__account--btn__text">Login</span>
                     </Link>
                   </li>
 
-                  <Link className="header__account--items" to="cart">
-                    <a
-                      className="header__account--btn minicart__open--btn"
-                      href="javascript:void(0)"
+                  <li class="header__account--items">
+                    <Link
+                      class="header__account--btn minicart__open--btn"
+                      to="cart"
                       data-offcanvas
                     >
                       <svg
@@ -202,52 +203,49 @@ const Header = () => {
                           </g>
                         </g>
                       </svg>
-                      <span className="header__account--btn__text">
-                        {" "}
-                        My cart
-                      </span>
-                      <span className="items__count">{cartItems.length}</span>
-                    </a>
-                  </Link>
+                      <span class="header__account--btn__text"> My cart</span>
+                      <span class="items__count">{cartItems.length}</span>
+                    </Link>
+                  </li>
                 </ul>
               </div>
-              <div className="header__menu d-none header__sticky--block d-lg-block">
-                <nav className="header__menu--navigation">
-                  <ul className="d-flex">
-                    <li className="header__menu--items style2">
-                      <Link className="header__menu--link" to="/">
+              <div class="header__menu d-none header__sticky--block d-lg-block">
+                <nav class="header__menu--navigation">
+                  <ul class="d-flex">
+                    <li class="header__menu--items style2">
+                      <Link class="header__menu--link" to="/">
                         Home
                       </Link>
                     </li>
-                    <li className="header__menu--items mega__menu--items style2">
-                      <Link className="header__menu--link" to="shop">
+                    <li class="header__menu--items mega__menu--items style2">
+                      <Link class="header__menu--link" to="shop">
                         Shop
                       </Link>
                     </li>
-                    <li className="header__menu--items style2">
-                      <Link className="header__menu--link" to="about">
-                        About US
+                    <li class="header__menu--items style2">
+                      <Link class="header__menu--link" to="about">
+                        About US{" "}
                       </Link>
                     </li>
 
-                    <li className="header__menu--items style2">
-                      <Link className="header__menu--link" href="contact">
-                        Contact
+                    <li class="header__menu--items style2">
+                      <Link class="header__menu--link " to="contact">
+                        Contact{" "}
                       </Link>
                     </li>
                   </ul>
                 </nav>
               </div>
-              <div className="header__account header__account2 header__sticky--block">
-                <ul className="d-flex">
-                  <li className="header__account--items header__account2--items  header__account--search__items d-none d-lg-block">
+              <div class="header__account header__account2 header__sticky--block">
+                <ul class="d-flex">
+                  <li class="header__account--items header__account2--items  header__account--search__items d-none d-lg-block">
                     <a
-                      className="header__account--btn search__open--btn"
+                      class="header__account--btn search__open--btn"
                       href="javascript:void(0)"
                       data-offcanvas
                     >
                       <svg
-                        className="header__search--button__svg"
+                        class="header__search--button__svg"
                         xmlns="http://www.w3.org/2000/svg"
                         width="26.51"
                         height="23.443"
@@ -269,11 +267,11 @@ const Header = () => {
                           d="M338.29 338.29L448 448"
                         />
                       </svg>
-                      <span className="visually-hidden">Search</span>
+                      <span class="visually-hidden">Search</span>
                     </a>
                   </li>
-                  <li className="header__account--items header__account2--items">
-                    <a className="header__account--btn" href="my-account.html">
+                  <li class="header__account--items header__account2--items">
+                    <Link class="header__account--btn" to="login">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="26.51"
@@ -296,32 +294,13 @@ const Header = () => {
                           stroke-width="32"
                         />
                       </svg>
-                      <span className="visually-hidden">My Account</span>
-                    </a>
+                      <span class="visually-hidden">Login</span>
+                    </Link>
                   </li>
-                  <li className="header__account--items header__account2--items d-none d-lg-block">
-                    <a className="header__account--btn" href="wishlist.html">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="28.51"
-                        height="23.443"
-                        viewBox="0 0 512 512"
-                      >
-                        <path
-                          d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="32"
-                        ></path>
-                      </svg>
-                      <span className="items__count  wishlist style2">02</span>
-                    </a>
-                  </li>
-                  <li className="header__account--items header__account2--items">
+
+                  <li class="header__account--items header__account2--items">
                     <a
-                      className="header__account--btn minicart__open--btn"
+                      class="header__account--btn minicart__open--btn"
                       href="javascript:void(0)"
                       data-offcanvas
                     >
@@ -354,7 +333,7 @@ const Header = () => {
                           </g>
                         </g>
                       </svg>
-                      <span className="items__count style2">02</span>
+                      <span class="items__count style2">02</span>
                     </a>
                   </li>
                 </ul>
@@ -362,31 +341,31 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="header__bottom">
-          <div className="container-fluid">
-            <div className="header__bottom--inner position__relative d-none d-lg-flex justify-content-center align-items-center">
-              <div className="header__menu">
-                <nav className="header__menu--navigation">
-                  <ul className="d-flex">
-                    <li className="header__menu--items">
-                      <Link className="header__menu--link" to="/" style={{color:"#FFAF06"}}>
+        <div class="header__bottom">
+          <div class="container-fluid">
+            <div class="header__bottom--inner position__relative d-none d-lg-flex justify-content-center align-items-center">
+              <div class="header__menu">
+                <nav class="header__menu--navigation">
+                  <ul class="d-flex">
+                    <li class="header__menu--items">
+                      <Link class="header__menu--link" href="/">
                         Home
                       </Link>
                     </li>
-                    <li className="header__menu--items mega__menu--items">
-                      <Link className="header__menu--link" to="shop">
+                    <li class="header__menu--items mega__menu--items">
+                      <Link class="header__menu--link" to="shop">
                         Shop
                       </Link>
                     </li>
-                    <li className="header__menu--items">
-                      <Link className="header__menu--link" to="about">
-                        About Us{" "}
+                    <li class="header__menu--items">
+                      <Link class="header__menu--link" to="about">
+                        About US{" "}
                       </Link>
                     </li>
 
-                    <li className="header__menu--items">
-                      <Link className="header__menu--link" to="contact">
-                        Contact Us{" "}
+                    <li class="header__menu--items">
+                      <Link class="header__menu--link" to="contact">
+                        Contact{" "}
                       </Link>
                     </li>
                   </ul>
@@ -395,176 +374,89 @@ const Header = () => {
             </div>
           </div>
         </div>
-
         {/* <!-- Start Offcanvas header menu --> */}
-        <div className="offcanvas__header">
-          <div className="offcanvas__inner">
-            <div className="offcanvas__logo">
-              <a className="offcanvas__logo_link" href="index.html">
-                <img src={logo} alt="Grocee Logo" width="158" height="36" />
-              </a>
-              <button className="offcanvas__close--btn" data-offcanvas>
-                close
-              </button>
-            </div>
-            <nav className="offcanvas__menu">
-              <ul className="offcanvas__menu_ul">
-                <li className="offcanvas__menu_li">
-                  <a className="offcanvas__menu_item" to="/">
-                    Home
-                  </a>
-                </li>
-                <li className="offcanvas__menu_li">
-                  <Link className="offcanvas__menu_item" to="shop">
-                    Shop
-                  </Link>
-                </li>
 
-                <li className="offcanvas__menu_li">
-                  <Link className="offcanvas__menu_item" to="about">
-                    About
-                  </Link>
-                </li>
-                <li className="offcanvas__menu_li">
-                  <Link className="offcanvas__menu_item" to="contact">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-              <div className="offcanvas__account--items">
-                <a
-                  className="offcanvas__account--items__btn d-flex align-items-center"
-                  href="login.html"
-                >
-                  <span className="offcanvas__account--items__icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20.51"
-                      height="19.443"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="32"
-                      />
-                      <path
-                        d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-miterlimit="10"
-                        stroke-width="32"
-                      />
-                    </svg>
-                  </span>
-                  <span className="offcanvas__account--items__label">
-                    Login / Register
-                  </span>
+        {isMenuOpen && (
+          <div className="offcanvas__header color-scheme-2">
+            <div class="offcanvas__inner">
+              <div class="offcanvas__logo">
+                <a class="offcanvas__logo_link" href="index.html">
+                  <img src={logo} alt="Grocee Logo" width="158" height="36" />
                 </a>
+                <button class="offcanvas__close--btn" data-offcanvas>
+                  close
+                </button>
               </div>
-              <div className="language__currency">
-                <ul className="d-flex align-items-center">
-                  <li className="language__currency--list">
-                    <a className="offcanvas__language--switcher" href="#">
-                      <img
-                        className="language__switcher--icon__img"
-                        src={img3}
-                        alt="currency"
-                      />
-                      <span>English</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="11.797"
-                        height="9.05"
-                        viewBox="0 0 9.797 6.05"
-                      >
-                        <path
-                          d="M14.646,8.59,10.9,12.329,7.151,8.59,6,9.741l4.9,4.9,4.9-4.9Z"
-                          transform="translate(-6 -8.59)"
-                          fill="currentColor"
-                          opacity="0.7"
-                        />
-                      </svg>
-                    </a>
-                    <div className="offcanvas__dropdown--language">
-                      <ul>
-                        <li className="language__items">
-                          <a className="language__text" href="#">
-                            France
-                          </a>
-                        </li>
-                        <li className="language__items">
-                          <a className="language__text" href="#">
-                            Russia
-                          </a>
-                        </li>
-                        <li className="language__items">
-                          <a className="language__text" href="#">
-                            Spanish
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+              <nav class="offcanvas__menu">
+                <ul class="offcanvas__menu_ul">
+                  <li class="offcanvas__menu_li">
+                    <Link class="offcanvas__menu_item" to="/">
+                      Home
+                    </Link>
                   </li>
-                  <li className="language__currency--list">
-                    <a className="offcanvas__account--currency__menu" href="#">
-                      <img src={img4} alt="currency" />
-                      <span>$ US Dollar</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="11.797"
-                        height="9.05"
-                        viewBox="0 0 9.797 6.05"
-                      >
-                        <path
-                          d="M14.646,8.59,10.9,12.329,7.151,8.59,6,9.741l4.9,4.9,4.9-4.9Z"
-                          transform="translate(-6 -8.59)"
-                          fill="currentColor"
-                          opacity="0.7"
-                        />
-                      </svg>
-                    </a>
-                    <div className="offcanvas__account--currency__submenu">
-                      <ul>
-                        <li className="currency__items">
-                          <a className="currency__text" href="#">
-                            CAD
-                          </a>
-                        </li>
-                        <li className="currency__items">
-                          <a className="currency__text" href="#">
-                            CNY
-                          </a>
-                        </li>
-                        <li className="currency__items">
-                          <a className="currency__text" href="#">
-                            EUR
-                          </a>
-                        </li>
-                        <li className="currency__items">
-                          <a className="currency__text" href="#">
-                            GBP
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                  <li class="offcanvas__menu_li">
+                    <Link class="offcanvas__menu_item" to="shop">
+                      Shop
+                    </Link>
+                  </li>
+
+                  <li class="offcanvas__menu_li">
+                    <Link class="offcanvas__menu_item" to="about">
+                      About
+                    </Link>
+                  </li>
+                  <li class="offcanvas__menu_li">
+                    <Link class="offcanvas__menu_item" to="contact">
+                      Contact
+                    </Link>
                   </li>
                 </ul>
-              </div>
-            </nav>
+                <div class="offcanvas__account--items">
+                  <Link
+                    class="offcanvas__account--items__btn d-flex align-items-center"
+                    to="login"
+                  >
+                    <span class="offcanvas__account--items__icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20.51"
+                        height="19.443"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="32"
+                        />
+                        <path
+                          d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-miterlimit="10"
+                          stroke-width="32"
+                        />
+                      </svg>
+                    </span>
+                    <span class="offcanvas__account--items__label">
+                      Login / Register
+                    </span>
+                  </Link>
+                </div>
+              </nav>
+            </div>
           </div>
-        </div>
+        )}
         {/* <!-- End Offcanvas header menu --> */}
 
         {/* <!-- Start Offcanvas stikcy toolbar --> */}
-        <div className="offcanvas__stikcy--toolbar">
-          <ul className="d-flex justify-content-between">
-            <li className="offcanvas__stikcy--toolbar__list">
-              <a className="offcanvas__stikcy--toolbar__btn" href="index.html">
-                <span className="offcanvas__stikcy--toolbar__icon">
+        <div class="offcanvas__stikcy--toolbar color-scheme-2">
+          <ul class="d-flex justify-content-between">
+            <li class="offcanvas__stikcy--toolbar__list">
+              <Link class="offcanvas__stikcy--toolbar__btn" to="/">
+                <span class="offcanvas__stikcy--toolbar__icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -578,12 +470,12 @@ const Header = () => {
                     ></path>
                   </svg>
                 </span>
-                <span className="offcanvas__stikcy--toolbar__label">Home</span>
-              </a>
+                <span class="offcanvas__stikcy--toolbar__label">Home</span>
+              </Link>
             </li>
-            <li className="offcanvas__stikcy--toolbar__list">
-              <a className="offcanvas__stikcy--toolbar__btn" href="shop.html">
-                <span className="offcanvas__stikcy--toolbar__icon">
+            <li class="offcanvas__stikcy--toolbar__list">
+              <Link class="offcanvas__stikcy--toolbar__btn" to="shop">
+                <span class="offcanvas__stikcy--toolbar__icon">
                   <svg
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
@@ -594,16 +486,16 @@ const Header = () => {
                     <path d="M416 32H32A32 32 0 0 0 0 64v384a32 32 0 0 0 32 32h384a32 32 0 0 0 32-32V64a32 32 0 0 0-32-32zm-16 48v152H248V80zm-200 0v152H48V80zM48 432V280h152v152zm200 0V280h152v152z"></path>
                   </svg>
                 </span>
-                <span className="offcanvas__stikcy--toolbar__label">Shop</span>
-              </a>
+                <span class="offcanvas__stikcy--toolbar__label">Shop</span>
+              </Link>
             </li>
-            <li className="offcanvas__stikcy--toolbar__list ">
+            <li class="offcanvas__stikcy--toolbar__list ">
               <a
-                className="offcanvas__stikcy--toolbar__btn search__open--btn"
+                class="offcanvas__stikcy--toolbar__btn search__open--btn"
                 href="javascript:void(0)"
                 data-offcanvas
               >
-                <span className="offcanvas__stikcy--toolbar__icon">
+                <span class="offcanvas__stikcy--toolbar__icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22.51"
@@ -627,18 +519,16 @@ const Header = () => {
                     />
                   </svg>
                 </span>
-                <span className="offcanvas__stikcy--toolbar__label">
-                  Search
-                </span>
+                <span class="offcanvas__stikcy--toolbar__label">Search</span>
               </a>
             </li>
-            <li className="offcanvas__stikcy--toolbar__list">
-              <a
-                className="offcanvas__stikcy--toolbar__btn minicart__open--btn"
-                href="javascript:void(0)"
+            <li class="offcanvas__stikcy--toolbar__list">
+              <Link
+                class="offcanvas__stikcy--toolbar__btn minicart__open--btn"
+                to="cart"
                 data-offcanvas
               >
-                <span className="offcanvas__stikcy--toolbar__icon">
+                <span class="offcanvas__stikcy--toolbar__icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18.51"
@@ -652,60 +542,30 @@ const Header = () => {
                     />
                   </svg>
                 </span>
-                <span className="offcanvas__stikcy--toolbar__label">Cart</span>
-                <span className="items__count">3</span>
-              </a>
+                <span class="offcanvas__stikcy--toolbar__label">Cart</span>
+                <span class="items__count">{cartItems.length}</span>
+              </Link>
             </li>
-            {/* <li className="offcanvas__stikcy--toolbar__list">
-              <a
-                className="offcanvas__stikcy--toolbar__btn"
-                href="wishlist.html"
-              >
-                <span className="offcanvas__stikcy--toolbar__icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18.541"
-                    height="15.557"
-                    viewBox="0 0 18.541 15.557"
-                  >
-                    <path
-                      d="M71.775,135.51a5.153,5.153,0,0,1,1.267-1.524,4.986,4.986,0,0,1,6.584.358,4.728,4.728,0,0,1,1.174,4.914,10.458,10.458,0,0,1-2.132,3.808,22.591,22.591,0,0,1-5.4,4.558c-.445.282-.9.549-1.356.812a.306.306,0,0,1-.254.013,25.491,25.491,0,0,1-6.279-4.8,11.648,11.648,0,0,1-2.52-4.009,4.957,4.957,0,0,1,.028-3.787,4.629,4.629,0,0,1,3.744-2.863,4.782,4.782,0,0,1,5.086,2.447c.013.019.025.034.057.076Z"
-                      transform="translate(-62.498 -132.915)"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-                <span className="offcanvas__stikcy--toolbar__label">
-                  Wishlist
-                </span>
-                <span className="items__count">3</span>
-              </a>
-            </li> */}
           </ul>
         </div>
         {/* <!-- End Offcanvas stikcy toolbar --> */}
 
-  
-
-        {/* <!-- Start serch box area --> */}
-        <div className="predictive__search--box ">
-          <div className="predictive__search--box__inner">
-            <h2 className="predictive__search--title">Search Products</h2>
-            <form className="predictive__search--form" action="#">
+        {/* 
+        <!-- Start serch box area --> */}
+        <div class="predictive__search--box color-scheme-2">
+          <div class="predictive__search--box__inner">
+            <h2 class="predictive__search--title">Search Products</h2>
+            <form class="predictive__search--form" action="#">
               <label>
                 <input
-                  className="predictive__search--input"
+                  class="predictive__search--input"
                   placeholder="Search Here"
                   type="text"
                 />
               </label>
-              <button
-                className="predictive__search--button"
-                aria-label="search button"
-                type="submit"
-              >
+              <button class="predictive__search--button">
                 <svg
-                  className="header__search--button__svg"
+                  class="header__search--button__svg"
                   xmlns="http://www.w3.org/2000/svg"
                   width="30.51"
                   height="25.443"
@@ -731,12 +591,12 @@ const Header = () => {
             </form>
           </div>
           <button
-            className="predictive__search--close__btn"
+            class="predictive__search--close__btn"
             aria-label="search close button"
             data-offcanvas
           >
             <svg
-              className="predictive__search--close__icon"
+              class="predictive__search--close__icon"
               xmlns="http://www.w3.org/2000/svg"
               width="40.51"
               height="30.443"
@@ -760,7 +620,6 @@ const Header = () => {
         <Outlet />
       </main>
 
-   
       <Footer />
     </>
   );
