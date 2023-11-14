@@ -2291,22 +2291,22 @@ body.overlay__active::before,
 
 .offcanvas__header {
   position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 300px;
-  height: 100vh;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-  background-color: var(--white-color);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  opacity: 0;
-  visibility: hidden;
-}
+   z-index: 9999;
+   top: 0;
+   left: 0;
+   width: 100%;
+   max-width: 300px;
+   height: 100vh;
+   -webkit-transition: var(--transition);
+   transition: var(--transition);
+   /* -webkit-transform: translateX(-100%);
+   transform: translateX(-100%); */
+   background-color: var(--white-color);
+   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+   /* opacity: 0;
+   visibility: hidden; */
+ }
 
 @media only screen and (min-width: 480px) {
   .offcanvas__header {
@@ -6948,7 +6948,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media only screen and (min-width: 1200px) {
   .shipping__style3--inner {
-    padding:4rem  0rem;
+    padding: 4rem 0rem;
   }
 }
 
@@ -7229,7 +7229,21 @@ input[type="number"]::-webkit-outer-spin-button {
     visibility: visible;
   }
 }
-cd
+
+.footer__widget--inner {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer__widget--inner {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
 .newsletter__subscribe {
   margin-top: 2rem;
 }
@@ -7489,9 +7503,28 @@ cd
 }
 
 .footer-wid {
-  height: 150px;
-  width: 250px;
 }
+@media only screen and (min-width: 576px) {
+  .footer-wid {
+    height: 150px;
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-wid {
+    height: 150px;
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-wid {
+    height: 150px;
+    width: 250px;
+  }
+}
+
 @media only screen and (min-width: 1366px) {
   .footer__widget--desc.style3 {
     padding-right: 4rem;
@@ -13116,75 +13149,65 @@ details > summary::-webkit-details-marker {
 @media only screen and (min-width: 576px) {
   .banner-button {
     margin: 20px 70px;
-    width: 220px;
-
-    height: 45px;
-
-    padding: 10px;
-    background-color: #000000;
   }
 
   .banner-button p {
-    font-weight: 600px;
     font-size: 16px;
-    text-align: center;
-    line-height: 24px;
-    color: #ffffff;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .banner-button {
     margin: 20px 100px;
-    width: 220px;
-
-    height: 45px;
-
-    padding: 10px;
-    background-color: #000000;
   }
 
   .banner-button p {
-    font-weight: 600px;
     font-size: 16px;
-    text-align: center;
-    line-height: 24px;
-    color: #ffffff;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .banner-button {
     margin: 20px 100px;
-    width: 220px;
-
-    height: 45px;
-
-    padding: 10px;
-    background-color: #000000;
   }
 
   .banner-button p {
-    font-weight: 600px;
     font-size: 16px;
-    text-align: center;
-    line-height: 24px;
-    color: #ffffff;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .banner-button {
-    margin: 20px 100px;
-    width: 220px;
-
-    height: 45px;
-
-    padding: 10px;
+    margin: 20px 130px;
   }
 
   .banner-button p {
     font-size: 16px;
   }
+}
+
+
+
+
+/* Your CSS file */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #ffaf06; /* Change the color of the spinner */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Animation for spinning */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 /*# sourceMappingURL=style.css.map */

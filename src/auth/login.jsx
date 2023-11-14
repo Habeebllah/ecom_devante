@@ -148,6 +148,7 @@ const Login = () => {
                       <a
                         className="account__social--link facebook"
                         target="_blank"
+                        rel="noreferrer" 
                         href="https://www.facebook.com"
                       >
                         Facebook
@@ -155,6 +156,7 @@ const Login = () => {
                       <a
                         className="account__social--link google"
                         target="_blank"
+                        rel="noreferrer" 
                         href="https://www.google.com"
                       >
                         Google
@@ -162,6 +164,7 @@ const Login = () => {
                       <a
                         className="account__social--link twitter"
                         target="_blank"
+                        rel="noreferrer" 
                         href="https://twitter.com"
                       >
                         Twitter

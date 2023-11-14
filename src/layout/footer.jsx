@@ -19,9 +19,8 @@ const Footer = () => {
         style={{ backgroundColor: "#000000" }}
       >
         <div className="container-fluid">
-          <div className="main__footer">
-            <div className="row">
-            <div className="col-md-3">
+          <div className="main__footer d-flex justify-content-between">
+            <div className="footer__widget footer__widget--width">
               <h2 className="footer__widget--title text-ofwhite h3">
                 About Us
                 {/* <button
@@ -43,19 +42,18 @@ const Footer = () => {
                   </svg>
                 </button> */}
               </h2>
-              <div className="footer__widget--inner">
-                <p className="footer__widget--desc text-ofwhite mb-20 footer-wid">
+              <div className="footer__widget--inner ">
+                <p className="footer__widget--desc text-ofwhite mb-20 footer-wid" >
                   Devanti Couture is the home of fashion and accessories store
                   in Nigeria. We deliver quality accessories and ready to wear
                   dresses that fits your needs.
                 </p>
-                <div>
+                <Link to="/">
                   <img src={logo} alt="logo" />
-                </div>
+                </Link>
               </div>
             </div>
-            
-            <div className=" col-md-2 footer__widget">
+            <div className="footer__widget">
               <h2 className="footer__widget--title text-ofwhite h3">
                 Categories
               </h2>
@@ -88,7 +86,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className=" col-md-2 footer__widget">
+            <div className="footer__widget">
               <h2 className="footer__widget--title text-ofwhite h3">Company</h2>
 
               <ul className="footer__widget--menu footer__widget--inner">
@@ -125,7 +123,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-md-2 footer__widget">
+            <div className="footer__widget">
               <h2 className="footer__widget--title text-ofwhite h3">
                 My Account
               </h2>
@@ -151,14 +149,31 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-md-2 footer__widget">
+            <div className="footer__widget footer__widget--width">
               <h2 className="footer__widget--title text-ofwhite h3">
                 Newsletter
-                
+                <button
+                  className="footer__widget--button"
+                  aria-label="footer widget button"
+                >
+                  <svg
+                    className="footer__widget--title__arrowdown--icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12.355"
+                    height="8.394"
+                    viewBox="0 0 10.355 6.394"
+                  >
+                    <path
+                      d="M15.138,8.59l-3.961,3.952L7.217,8.59,6,9.807l5.178,5.178,5.178-5.178Z"
+                      transform="translate(-6 -8.59)"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </button>
               </h2>
               <div className="footer__widget--inner">
                 <p className="footer__widget--desc text-ofwhite m-0">
-                  Fill their seed open meat. Sea you 
+                  Fill their seed open meat. Sea you <br /> great Saw image stl
                 </p>
                 <div className="newsletter__subscribe">
                   <form className="newsletter__subscribe--form" action="#">
@@ -180,8 +195,6 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            </div>
-          
           </div>
           <div className="footer__bottom d-flex justify-content-between align-items-center">
 

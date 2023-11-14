@@ -13,10 +13,14 @@ import Footer from "./footer";
 import { CartContext } from "../cartContext";
 
 const Header = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
+  const toggleOffcanvas = () => {
+    console.log("Toggle off-canvas menu"); // Add this line
+    setIsOffcanvasOpen(!isOffcanvasOpen);
+  };
+  const closeOffcanvas = () => {
+    setIsOffcanvasOpen(false);
   };
   const { cartItems } = useContext(CartContext);
   return (
@@ -51,9 +55,7 @@ const Header = () => {
               <div class="offcanvas__header--menu__open ">
                 <a
                   class="offcanvas__header--menu__open--btn"
-                  
-                
-                  onClick={toggleMenu}
+                  onClick={toggleOffcanvas}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +76,7 @@ const Header = () => {
               </div>
               <div class="main__logo">
                 <h1 class="main__logo--title">
-                  <a class="main__logo--link" href="index.html">
+                  <Link class="main__logo--link" to="/">
                     <img
                       class="main__logo--img"
                       src={logo}
@@ -82,7 +84,7 @@ const Header = () => {
                       width={"200px"}
                       height={"200px"}
                     />
-                  </a>
+                  </Link>
                 </h1>
               </div>
               <div class="header__search--widget header__sticky--none d-none d-lg-block">
@@ -348,7 +350,7 @@ const Header = () => {
                 <nav class="header__menu--navigation">
                   <ul class="d-flex">
                     <li class="header__menu--items">
-                      <Link class="header__menu--link" href="/">
+                      <Link class="header__menu--link" to="/">
                         Home
                       </Link>
                     </li>
@@ -376,37 +378,57 @@ const Header = () => {
         </div>
         {/* <!-- Start Offcanvas header menu --> */}
 
-        {isMenuOpen && (
+        {isOffcanvasOpen && (
           <div className="offcanvas__header color-scheme-2">
             <div class="offcanvas__inner">
               <div class="offcanvas__logo">
                 <a class="offcanvas__logo_link" href="index.html">
                   <img src={logo} alt="Grocee Logo" width="158" height="36" />
                 </a>
-                <button class="offcanvas__close--btn" data-offcanvas>
+                <button
+                  class="offcanvas__close--btn"
+                  data-offcanvas
+                  onClick={closeOffcanvas}
+                >
                   close
                 </button>
               </div>
               <nav class="offcanvas__menu">
                 <ul class="offcanvas__menu_ul">
                   <li class="offcanvas__menu_li">
-                    <Link class="offcanvas__menu_item" to="/">
+                    <Link
+                      class="offcanvas__menu_item"
+                      to="/"
+                      onClick={closeOffcanvas}
+                    >
                       Home
                     </Link>
                   </li>
                   <li class="offcanvas__menu_li">
-                    <Link class="offcanvas__menu_item" to="shop">
+                    <Link
+                      class="offcanvas__menu_item"
+                      to="shop"
+                      onClick={closeOffcanvas}
+                    >
                       Shop
                     </Link>
                   </li>
 
                   <li class="offcanvas__menu_li">
-                    <Link class="offcanvas__menu_item" to="about">
+                    <Link
+                      class="offcanvas__menu_item"
+                      to="about"
+                      onClick={closeOffcanvas}
+                    >
                       About
                     </Link>
                   </li>
                   <li class="offcanvas__menu_li">
-                    <Link class="offcanvas__menu_item" to="contact">
+                    <Link
+                      class="offcanvas__menu_item"
+                      to="contact"
+                      onClick={closeOffcanvas}
+                    >
                       Contact
                     </Link>
                   </li>
@@ -415,6 +437,7 @@ const Header = () => {
                   <Link
                     class="offcanvas__account--items__btn d-flex align-items-center"
                     to="login"
+                    onClick={closeOffcanvas}
                   >
                     <span class="offcanvas__account--items__icon">
                       <svg

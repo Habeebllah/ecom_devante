@@ -17,8 +17,6 @@ const Shop = () => {
   return (
     <>
       <main className="main__content_wrapper">
-   
-
         {/* <!-- Start shop section --> */}
         <section className="shop__section section--padding">
           <div className="container-fluid">
@@ -283,7 +281,7 @@ const Shop = () => {
               </p>
             </div>
             <div className="row">
-            <div className="col-xl-3 col-lg-4">
+              <div className="col-xl-3 col-lg-4">
                 <div className="shop__sidebar--widget widget__area d-none d-lg-block">
                   <div className="single__widget widget__bg">
                     <h2 className="widget__title h3">Categories</h2>
@@ -634,81 +632,6 @@ const Shop = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="single__widget widget__bg">
-                    <h2 className="widget__title h3">Brands</h2>
-                    <ul className="widget__form--check">
-                      <li className="widget__form--check__list">
-                        <label
-                          className="widget__form--check__label"
-                          for="check1"
-                        >
-                          Denim shirt
-                        </label>
-                        <input
-                          className="widget__form--check__input"
-                          id="ch /eck1"
-                          type="checkbox"
-                        />
-                        <span className="widget__form--checkmark"></span>
-                      </li>
-                      <li className="widget__form--check__list">
-                        <label
-                          className="widget__form--check__label"
-                          for="check2"
-                        >
-                          Need Winter
-                        </label>
-                        <input
-                          className="widget__form--check__input"
-                          id="check2"
-                          type="checkbox"
-                        />
-                        <span className="widget__form--checkmark"></span>
-                      </li>
-                      <li className="widget__form--check__list">
-                        <label
-                          className="widget__form--check__label"
-                          for="check3"
-                        >
-                          Fashion Trends
-                        </label>
-                        <input
-                          className="widget__form--check__input"
-                          id="check3"
-                          type="checkbox"
-                        />
-                        <span className="widget__form--checkmark"></span>
-                      </li>
-                      <li className="widget__form--check__list">
-                        <label
-                          className="widget__form--check__label"
-                          for="check4"
-                        >
-                          Oversize Cotton
-                        </label>
-                        <input
-                          className="widget__form--check__input"
-                          id="check4"
-                          type="checkbox"
-                        />
-                        <span className="widget__form--checkmark"></span>
-                      </li>
-                      <li className="widget__form--check__list">
-                        <label
-                          className="widget__form--check__label"
-                          for="check5"
-                        >
-                          Baking material
-                        </label>
-                        <input
-                          className="widget__form--check__input"
-                          id="check5"
-                          type="checkbox"
-                        />
-                        <span className="widget__form--checkmark"></span>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
               <div className="col-xl-9 col-lg-8">
@@ -748,7 +671,7 @@ const Shop = () => {
                                   </h3>
                                   <div className="product__items--price">
                                     <span className="current__price">
-                                    ₦{product.current_price}
+                                      ₦{product.current_price}
                                     </span>
                                     <span className="price__divided"></span>
                                     <span className="old__price">
@@ -977,8 +900,6 @@ const Shop = () => {
                   </div>
                 </div>
               </div>
-             
-        
             </div>
           </div>
         </section>
